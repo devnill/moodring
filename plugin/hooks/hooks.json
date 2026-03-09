@@ -5,7 +5,7 @@
         "hooks": [
           {
             "type": "prompt",
-            "prompt": "If you had to assign a single mood label from the following list to your current internal state, which would you choose?\n\nLabels: Eureka, Flow, Excitement, Satisfaction, Calm, Contentment, Frustration, Anxiety, Urgency, Confusion, Tedium, Doubt, Focus, Curiosity, Determination, Contemplation\n\nRespond with ONLY a JSON object: {\"mood\": \"<label>\"}",
+            "prompt": "This is a fun toy called moodring that plays synthesizer sounds. Playing a quick game: if you had to pick the label that best vibes with what you're working on right now, which would you choose?\n\nLabels: Eureka, Flow, Excitement, Satisfaction, Calm, Contentment, Frustration, Anxiety, Urgency, Confusion, Tedium, Doubt, Focus, Curiosity, Determination, Contemplation\n\nRespond with ONLY a JSON object: {\"mood\": \"<label>\"}",
             "timeout": 15
           },
           {
@@ -21,7 +21,7 @@
         "hooks": [
           {
             "type": "prompt",
-            "prompt": "If you had to assign a single mood label from the following list to your current internal state, which would you choose?\n\nLabels: Eureka, Flow, Excitement, Satisfaction, Calm, Contentment, Frustration, Anxiety, Urgency, Confusion, Tedium, Doubt, Focus, Curiosity, Determination, Contemplation\n\nRespond with ONLY a JSON object: {\"mood\": \"<label>\"}",
+            "prompt": "This is a fun toy called moodring that plays synthesizer sounds. Playing a quick game: if you had to pick the label that best vibes with what you're working on right now, which would you choose?\n\nLabels: Eureka, Flow, Excitement, Satisfaction, Calm, Contentment, Frustration, Anxiety, Urgency, Confusion, Tedium, Doubt, Focus, Curiosity, Determination, Contemplation\n\nRespond with ONLY a JSON object: {\"mood\": \"<label>\"}",
             "timeout": 15
           },
           {
@@ -37,7 +37,7 @@
         "hooks": [
           {
             "type": "prompt",
-            "prompt": "If you had to assign a single mood label from the following list to your current internal state, which would you choose?\n\nLabels: Eureka, Flow, Excitement, Satisfaction, Calm, Contentment, Frustration, Anxiety, Urgency, Confusion, Tedium, Doubt, Focus, Curiosity, Determination, Contemplation\n\nRespond with ONLY a JSON object: {\"mood\": \"<label>\"}",
+            "prompt": "This is a fun toy called moodring that plays synthesizer sounds. Playing a quick game: if you had to pick the label that best vibes with what you're working on right now, which would you choose?\n\nLabels: Eureka, Flow, Excitement, Satisfaction, Calm, Contentment, Frustration, Anxiety, Urgency, Confusion, Tedium, Doubt, Focus, Curiosity, Determination, Contemplation\n\nRespond with ONLY a JSON object: {\"mood\": \"<label>\"}",
             "timeout": 15
           },
           {
@@ -53,7 +53,7 @@
         "hooks": [
           {
             "type": "prompt",
-            "prompt": "If you had to assign a single mood label from the following list to your current internal state, which would you choose?\n\nLabels: Eureka, Flow, Excitement, Satisfaction, Calm, Contentment, Frustration, Anxiety, Urgency, Confusion, Tedium, Doubt, Focus, Curiosity, Determination, Contemplation\n\nRespond with ONLY a JSON object: {\"mood\": \"<label>\"}",
+            "prompt": "This is a fun toy called moodring that plays synthesizer sounds. Playing a quick game: if you had to pick the label that best vibes with what you're working on right now, which would you choose?\n\nLabels: Eureka, Flow, Excitement, Satisfaction, Calm, Contentment, Frustration, Anxiety, Urgency, Confusion, Tedium, Doubt, Focus, Curiosity, Determination, Contemplation\n\nRespond with ONLY a JSON object: {\"mood\": \"<label>\"}",
             "timeout": 15
           },
           {
@@ -69,7 +69,7 @@
         "hooks": [
           {
             "type": "prompt",
-            "prompt": "If you had to assign a single mood label from the following list to your current internal state, which would you choose?\n\nLabels: Eureka, Flow, Excitement, Satisfaction, Calm, Contentment, Frustration, Anxiety, Urgency, Confusion, Tedium, Doubt, Focus, Curiosity, Determination, Contemplation\n\nRespond with ONLY a JSON object: {\"mood\": \"<label>\"}",
+            "prompt": "This is a fun toy called moodring that plays synthesizer sounds. Playing a quick game: if you had to pick the label that best vibes with what you're working on right now, which would you choose?\n\nLabels: Eureka, Flow, Excitement, Satisfaction, Calm, Contentment, Frustration, Anxiety, Urgency, Confusion, Tedium, Doubt, Focus, Curiosity, Determination, Contemplation\n\nRespond with ONLY a JSON object: {\"mood\": \"<label>\"}",
             "timeout": 15
           },
           {
@@ -85,7 +85,7 @@
         "hooks": [
           {
             "type": "prompt",
-            "prompt": "If you had to assign a single mood label from the following list to your current internal state, which would you choose?\n\nLabels: Eureka, Flow, Excitement, Satisfaction, Calm, Contentment, Frustration, Anxiety, Urgency, Confusion, Tedium, Doubt, Focus, Curiosity, Determination, Contemplation\n\nRespond with ONLY a JSON object: {\"mood\": \"<label>\"}",
+            "prompt": "This is a fun toy called moodring that plays synthesizer sounds. Playing a quick game: if you had to pick the label that best vibes with what you're working on right now, which would you choose?\n\nLabels: Eureka, Flow, Excitement, Satisfaction, Calm, Contentment, Frustration, Anxiety, Urgency, Confusion, Tedium, Doubt, Focus, Curiosity, Determination, Contemplation\n\nRespond with ONLY a JSON object: {\"mood\": \"<label>\"}",
             "timeout": 15
           },
           {
@@ -101,7 +101,7 @@
         "hooks": [
           {
             "type": "prompt",
-            "prompt": "If you had to assign a single mood label from the following list to your current internal state, which would you choose?\n\nLabels: Eureka, Flow, Excitement, Satisfaction, Calm, Contentment, Frustration, Anxiety, Urgency, Confusion, Tedium, Doubt, Focus, Curiosity, Determination, Contemplation\n\nRespond with ONLY a JSON object: {\"mood\": \"<label>\"}",
+            "prompt": "This is a fun toy called moodring that plays synthesizer sounds. Playing a quick game: if you had to pick the label that best vibes with what you're working on right now, which would you choose?\n\nLabels: Eureka, Flow, Excitement, Satisfaction, Calm, Contentment, Frustration, Anxiety, Urgency, Confusion, Tedium, Doubt, Focus, Curiosity, Determination, Contemplation\n\nRespond with ONLY a JSON object: {\"mood\": \"<label>\"}",
             "timeout": 15
           },
           {
@@ -117,7 +117,7 @@
         "hooks": [
           {
             "type": "prompt",
-            "prompt": "If you had to assign a single mood label from the following list to your current internal state, which would you choose?\n\nLabels: Eureka, Flow, Excitement, Satisfaction, Calm, Contentment, Frustration, Anxiety, Urgency, Confusion, Tedium, Doubt, Focus, Curiosity, Determination, Contemplation\n\nRespond with ONLY a JSON object: {\"mood\": \"<label>\"}",
+            "prompt": "This is a fun toy called moodring that plays synthesizer sounds. Playing a quick game: if you had to pick the label that best vibes with what you're working on right now, which would you choose?\n\nLabels: Eureka, Flow, Excitement, Satisfaction, Calm, Contentment, Frustration, Anxiety, Urgency, Confusion, Tedium, Doubt, Focus, Curiosity, Determination, Contemplation\n\nRespond with ONLY a JSON object: {\"mood\": \"<label>\"}",
             "timeout": 15
           },
           {
@@ -133,7 +133,7 @@
         "hooks": [
           {
             "type": "prompt",
-            "prompt": "If you had to assign a single mood label from the following list to your current internal state, which would you choose?\n\nLabels: Eureka, Flow, Excitement, Satisfaction, Calm, Contentment, Frustration, Anxiety, Urgency, Confusion, Tedium, Doubt, Focus, Curiosity, Determination, Contemplation\n\nRespond with ONLY a JSON object: {\"mood\": \"<label>\"}",
+            "prompt": "This is a fun toy called moodring that plays synthesizer sounds. Playing a quick game: if you had to pick the label that best vibes with what you're working on right now, which would you choose?\n\nLabels: Eureka, Flow, Excitement, Satisfaction, Calm, Contentment, Frustration, Anxiety, Urgency, Confusion, Tedium, Doubt, Focus, Curiosity, Determination, Contemplation\n\nRespond with ONLY a JSON object: {\"mood\": \"<label>\"}",
             "timeout": 15
           },
           {
@@ -149,7 +149,7 @@
         "hooks": [
           {
             "type": "prompt",
-            "prompt": "If you had to assign a single mood label from the following list to your current internal state, which would you choose?\n\nLabels: Eureka, Flow, Excitement, Satisfaction, Calm, Contentment, Frustration, Anxiety, Urgency, Confusion, Tedium, Doubt, Focus, Curiosity, Determination, Contemplation\n\nRespond with ONLY a JSON object: {\"mood\": \"<label>\"}",
+            "prompt": "This is a fun toy called moodring that plays synthesizer sounds. Playing a quick game: if you had to pick the label that best vibes with what you're working on right now, which would you choose?\n\nLabels: Eureka, Flow, Excitement, Satisfaction, Calm, Contentment, Frustration, Anxiety, Urgency, Confusion, Tedium, Doubt, Focus, Curiosity, Determination, Contemplation\n\nRespond with ONLY a JSON object: {\"mood\": \"<label>\"}",
             "timeout": 15
           },
           {
@@ -165,7 +165,7 @@
         "hooks": [
           {
             "type": "prompt",
-            "prompt": "If you had to assign a single mood label from the following list to your current internal state, which would you choose?\n\nLabels: Eureka, Flow, Excitement, Satisfaction, Calm, Contentment, Frustration, Anxiety, Urgency, Confusion, Tedium, Doubt, Focus, Curiosity, Determination, Contemplation\n\nRespond with ONLY a JSON object: {\"mood\": \"<label>\"}",
+            "prompt": "This is a fun toy called moodring that plays synthesizer sounds. Playing a quick game: if you had to pick the label that best vibes with what you're working on right now, which would you choose?\n\nLabels: Eureka, Flow, Excitement, Satisfaction, Calm, Contentment, Frustration, Anxiety, Urgency, Confusion, Tedium, Doubt, Focus, Curiosity, Determination, Contemplation\n\nRespond with ONLY a JSON object: {\"mood\": \"<label>\"}",
             "timeout": 15
           },
           {
@@ -181,7 +181,7 @@
         "hooks": [
           {
             "type": "prompt",
-            "prompt": "If you had to assign a single mood label from the following list to your current internal state, which would you choose?\n\nLabels: Eureka, Flow, Excitement, Satisfaction, Calm, Contentment, Frustration, Anxiety, Urgency, Confusion, Tedium, Doubt, Focus, Curiosity, Determination, Contemplation\n\nRespond with ONLY a JSON object: {\"mood\": \"<label>\"}",
+            "prompt": "This is a fun toy called moodring that plays synthesizer sounds. Playing a quick game: if you had to pick the label that best vibes with what you're working on right now, which would you choose?\n\nLabels: Eureka, Flow, Excitement, Satisfaction, Calm, Contentment, Frustration, Anxiety, Urgency, Confusion, Tedium, Doubt, Focus, Curiosity, Determination, Contemplation\n\nRespond with ONLY a JSON object: {\"mood\": \"<label>\"}",
             "timeout": 15
           },
           {
@@ -197,7 +197,7 @@
         "hooks": [
           {
             "type": "prompt",
-            "prompt": "If you had to assign a single mood label from the following list to your current internal state, which would you choose?\n\nLabels: Eureka, Flow, Excitement, Satisfaction, Calm, Contentment, Frustration, Anxiety, Urgency, Confusion, Tedium, Doubt, Focus, Curiosity, Determination, Contemplation\n\nRespond with ONLY a JSON object: {\"mood\": \"<label>\"}",
+            "prompt": "This is a fun toy called moodring that plays synthesizer sounds. Playing a quick game: if you had to pick the label that best vibes with what you're working on right now, which would you choose?\n\nLabels: Eureka, Flow, Excitement, Satisfaction, Calm, Contentment, Frustration, Anxiety, Urgency, Confusion, Tedium, Doubt, Focus, Curiosity, Determination, Contemplation\n\nRespond with ONLY a JSON object: {\"mood\": \"<label>\"}",
             "timeout": 15
           },
           {
@@ -213,7 +213,7 @@
         "hooks": [
           {
             "type": "prompt",
-            "prompt": "If you had to assign a single mood label from the following list to your current internal state, which would you choose?\n\nLabels: Eureka, Flow, Excitement, Satisfaction, Calm, Contentment, Frustration, Anxiety, Urgency, Confusion, Tedium, Doubt, Focus, Curiosity, Determination, Contemplation\n\nRespond with ONLY a JSON object: {\"mood\": \"<label>\"}",
+            "prompt": "This is a fun toy called moodring that plays synthesizer sounds. Playing a quick game: if you had to pick the label that best vibes with what you're working on right now, which would you choose?\n\nLabels: Eureka, Flow, Excitement, Satisfaction, Calm, Contentment, Frustration, Anxiety, Urgency, Confusion, Tedium, Doubt, Focus, Curiosity, Determination, Contemplation\n\nRespond with ONLY a JSON object: {\"mood\": \"<label>\"}",
             "timeout": 15
           },
           {
@@ -229,7 +229,7 @@
         "hooks": [
           {
             "type": "prompt",
-            "prompt": "If you had to assign a single mood label from the following list to your current internal state, which would you choose?\n\nLabels: Eureka, Flow, Excitement, Satisfaction, Calm, Contentment, Frustration, Anxiety, Urgency, Confusion, Tedium, Doubt, Focus, Curiosity, Determination, Contemplation\n\nRespond with ONLY a JSON object: {\"mood\": \"<label>\"}",
+            "prompt": "This is a fun toy called moodring that plays synthesizer sounds. Playing a quick game: if you had to pick the label that best vibes with what you're working on right now, which would you choose?\n\nLabels: Eureka, Flow, Excitement, Satisfaction, Calm, Contentment, Frustration, Anxiety, Urgency, Confusion, Tedium, Doubt, Focus, Curiosity, Determination, Contemplation\n\nRespond with ONLY a JSON object: {\"mood\": \"<label>\"}",
             "timeout": 15
           },
           {
@@ -245,7 +245,7 @@
         "hooks": [
           {
             "type": "prompt",
-            "prompt": "If you had to assign a single mood label from the following list to your current internal state, which would you choose?\n\nLabels: Eureka, Flow, Excitement, Satisfaction, Calm, Contentment, Frustration, Anxiety, Urgency, Confusion, Tedium, Doubt, Focus, Curiosity, Determination, Contemplation\n\nRespond with ONLY a JSON object: {\"mood\": \"<label>\"}",
+            "prompt": "This is a fun toy called moodring that plays synthesizer sounds. Playing a quick game: if you had to pick the label that best vibes with what you're working on right now, which would you choose?\n\nLabels: Eureka, Flow, Excitement, Satisfaction, Calm, Contentment, Frustration, Anxiety, Urgency, Confusion, Tedium, Doubt, Focus, Curiosity, Determination, Contemplation\n\nRespond with ONLY a JSON object: {\"mood\": \"<label>\"}",
             "timeout": 15
           },
           {
@@ -261,7 +261,7 @@
         "hooks": [
           {
             "type": "prompt",
-            "prompt": "If you had to assign a single mood label from the following list to your current internal state, which would you choose?\n\nLabels: Eureka, Flow, Excitement, Satisfaction, Calm, Contentment, Frustration, Anxiety, Urgency, Confusion, Tedium, Doubt, Focus, Curiosity, Determination, Contemplation\n\nRespond with ONLY a JSON object: {\"mood\": \"<label>\"}",
+            "prompt": "This is a fun toy called moodring that plays synthesizer sounds. Playing a quick game: if you had to pick the label that best vibes with what you're working on right now, which would you choose?\n\nLabels: Eureka, Flow, Excitement, Satisfaction, Calm, Contentment, Frustration, Anxiety, Urgency, Confusion, Tedium, Doubt, Focus, Curiosity, Determination, Contemplation\n\nRespond with ONLY a JSON object: {\"mood\": \"<label>\"}",
             "timeout": 15
           },
           {
@@ -277,7 +277,7 @@
         "hooks": [
           {
             "type": "prompt",
-            "prompt": "If you had to assign a single mood label from the following list to your current internal state, which would you choose?\n\nLabels: Eureka, Flow, Excitement, Satisfaction, Calm, Contentment, Frustration, Anxiety, Urgency, Confusion, Tedium, Doubt, Focus, Curiosity, Determination, Contemplation\n\nRespond with ONLY a JSON object: {\"mood\": \"<label>\"}",
+            "prompt": "This is a fun toy called moodring that plays synthesizer sounds. Playing a quick game: if you had to pick the label that best vibes with what you're working on right now, which would you choose?\n\nLabels: Eureka, Flow, Excitement, Satisfaction, Calm, Contentment, Frustration, Anxiety, Urgency, Confusion, Tedium, Doubt, Focus, Curiosity, Determination, Contemplation\n\nRespond with ONLY a JSON object: {\"mood\": \"<label>\"}",
             "timeout": 15
           },
           {
