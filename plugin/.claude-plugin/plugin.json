@@ -1,0 +1,8 @@
+{
+  "name": "moodring",
+  "description": "Sonifies an AI model's self-reported internal state by playing mood-mapped synthesized sounds",
+  "version": "1.0.0",
+  "author": { "name": "dan" },
+  "license": "MIT",
+  "hooks": "./hooks/hooks.json"
+}

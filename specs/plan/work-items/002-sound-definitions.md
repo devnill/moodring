@@ -1,0 +1,74 @@
+# 002: Sound Definitions
+
+## Objective
+Create `moods.py` with 16 Python functions, each returning a numpy array of audio samples defining the sound for one mood. Each function uses synth primitives and follows the parameters from the mood-sound mapping research.
+
+## Acceptance Criteria
+- [ ] File `moods.py` exists at the plugin root
+- [ ] `moods.py` imports `sine`, `square`, `sweep`, `fm`, `adsr`, `seq`, `silence` from `synth`
+- [ ] 16 functions exist, one per mood: `eureka`, `flow`, `excitement`, `satisfaction`, `calm`, `contentment`, `frustration`, `anxiety`, `urgency`, `confusion`, `tedium`, `doubt`, `focus`, `curiosity`, `determination`, `contemplation`
+- [ ] Each function has return type annotation `-> np.ndarray`
+- [ ] `SOUNDS` dict exists mapping all 16 PascalCase mood labels to their corresponding functions
+- [ ] Each function produces audio between 0.2 and 1.5 seconds in duration (at 44100 Hz sample rate, that's 8,820 to 66,150 samples)
+- [ ] All 16 sounds are perceptually distinct (use different frequency ranges, waveforms, or rhythmic patterns as specified in the research)
+
+## File Scope
+- `moods.py` (create)
+
+## Dependencies
+- Depends on: none
+- Blocks: 003
+
+## Implementation Notes
+
+### Imports
+```python
+import numpy as np
+from synth import sine, square, sweep, fm, adsr, seq, silence
+```
+
+### Sound Design Per Mood
+
+Implement each function following the parameters in `specs/steering/research/mood-sound-mapping.md`. Key mappings:
+
+| Mood | Primary Waveform | Freq Range | Duration Target |
+|------|-----------------|------------|-----------------|
+| Eureka | FM burst + sine arpeggio | 800-1200 Hz | 0.6s |
+| Flow | Layered sines, open fifths | 300-600 Hz | 1.0s |
+| Excitement | Triangle/pulse, syncopated | 500-1200 Hz | 0.5s |
+| Satisfaction | Gentle sine, resolving | 200-400 Hz | 0.8s |
+| Calm | Pure sine, breathing | 150-300 Hz | 1.2s |
+| Contentment | Sine+triangle, rocking | 250-450 Hz | 0.8s |
+| Frustration | Square PWM, buzzy | 300-500 Hz | 0.4s |
+| Anxiety | FM inharmonic, jittery | 400-900 Hz | 0.4s |
+| Urgency | Sawtooth, driving | 600-1500 Hz | 0.5s |
+| Confusion | Detuned oscillators | wandering | 0.5s |
+| Tedium | Static square, metronomic | 150-250 Hz | 0.6s |
+| Doubt | Triangle+LFO, questioning | 300-500 Hz | 0.6s |
+| Focus | Clean sine, stable fifth | 350-500 Hz | 0.8s |
+| Curiosity | Evolving FM, stepwise | 400-800 Hz | 0.7s |
+| Determination | Filtered sawtooth, heavy | 200-400 Hz | 0.7s |
+| Contemplation | Sine+harmonics, arcing | 200-350 Hz | 1.0s |
+
+### Example Function (from architecture)
+```python
+def eureka() -> np.ndarray:
+    """Bright ascending FM burst — breakthrough discovery."""
+    burst = adsr(fm(800, 800, 5, 0.15), 0.003, 0.04, 0.5, 0.08)
+    note1 = adsr(sine(800, 0.10), 0.005, 0.04, 0.3, 0.04)
+    note2 = adsr(sine(1000, 0.10), 0.005, 0.04, 0.3, 0.04)
+    note3 = adsr(sine(1200, 0.15), 0.005, 0.04, 0.5, 0.08)
+    return seq(burst, silence(0.02), note1, silence(0.02), note2, silence(0.02), note3)
+```
+
+### Design Principles
+- Use the Bouba/Kiki axis: positive/calm moods use sine waves (bouba), negative/aroused moods use square/sawtooth (kiki)
+- Dissonance maps to negative valence: use tritones and minor seconds for frustration/anxiety, perfect fifths and major thirds for satisfaction/calm
+- Rhythmic regularity maps to confidence: focus/determination have regular timing, anxiety/confusion have irregular patterns
+- Each sound must be identifiable in isolation — a listener should be able to distinguish any two moods by ear
+
+### SOUNDS Dict
+Keys must match the exact mood labels used in the prompt and expected by play-sound.sh for filename construction.
+
+## Complexity
+High
