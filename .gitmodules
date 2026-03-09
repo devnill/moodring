@@ -1,3 +1,3 @@
 [submodule "plugin/synth"]
 	path = plugin/synth
-	url = /Users/dan/code/synth
+	url = https://github.com/devnill/synth
