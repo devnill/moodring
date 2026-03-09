@@ -1,0 +1,3 @@
+[synth]
+sounds_file = "moods.py"
+output_dir = "sounds"

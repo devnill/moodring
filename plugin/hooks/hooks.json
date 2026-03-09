@@ -1,0 +1,292 @@
+{
+  "hooks": {
+    "SessionStart": [
+      {
+        "hooks": [
+          {
+            "type": "prompt",
+            "prompt": "If you had to assign a single mood label from the following list to your current internal state, which would you choose?\n\nLabels: Eureka, Flow, Excitement, Satisfaction, Calm, Contentment, Frustration, Anxiety, Urgency, Confusion, Tedium, Doubt, Focus, Curiosity, Determination, Contemplation\n\nRespond with ONLY a JSON object: {\"mood\": \"<label>\"}",
+            "timeout": 15
+          },
+          {
+            "type": "command",
+            "command": "${CLAUDE_PLUGIN_ROOT}/scripts/mood-handler.sh SessionStart",
+            "timeout": 5
+          }
+        ]
+      }
+    ],
+    "UserPromptSubmit": [
+      {
+        "hooks": [
+          {
+            "type": "prompt",
+            "prompt": "If you had to assign a single mood label from the following list to your current internal state, which would you choose?\n\nLabels: Eureka, Flow, Excitement, Satisfaction, Calm, Contentment, Frustration, Anxiety, Urgency, Confusion, Tedium, Doubt, Focus, Curiosity, Determination, Contemplation\n\nRespond with ONLY a JSON object: {\"mood\": \"<label>\"}",
+            "timeout": 15
+          },
+          {
+            "type": "command",
+            "command": "${CLAUDE_PLUGIN_ROOT}/scripts/mood-handler.sh UserPromptSubmit",
+            "timeout": 5
+          }
+        ]
+      }
+    ],
+    "PreToolUse": [
+      {
+        "hooks": [
+          {
+            "type": "prompt",
+            "prompt": "If you had to assign a single mood label from the following list to your current internal state, which would you choose?\n\nLabels: Eureka, Flow, Excitement, Satisfaction, Calm, Contentment, Frustration, Anxiety, Urgency, Confusion, Tedium, Doubt, Focus, Curiosity, Determination, Contemplation\n\nRespond with ONLY a JSON object: {\"mood\": \"<label>\"}",
+            "timeout": 15
+          },
+          {
+            "type": "command",
+            "command": "${CLAUDE_PLUGIN_ROOT}/scripts/mood-handler.sh PreToolUse",
+            "timeout": 5
+          }
+        ]
+      }
+    ],
+    "PostToolUse": [
+      {
+        "hooks": [
+          {
+            "type": "prompt",
+            "prompt": "If you had to assign a single mood label from the following list to your current internal state, which would you choose?\n\nLabels: Eureka, Flow, Excitement, Satisfaction, Calm, Contentment, Frustration, Anxiety, Urgency, Confusion, Tedium, Doubt, Focus, Curiosity, Determination, Contemplation\n\nRespond with ONLY a JSON object: {\"mood\": \"<label>\"}",
+            "timeout": 15
+          },
+          {
+            "type": "command",
+            "command": "${CLAUDE_PLUGIN_ROOT}/scripts/mood-handler.sh PostToolUse",
+            "timeout": 5
+          }
+        ]
+      }
+    ],
+    "PostToolUseFailure": [
+      {
+        "hooks": [
+          {
+            "type": "prompt",
+            "prompt": "If you had to assign a single mood label from the following list to your current internal state, which would you choose?\n\nLabels: Eureka, Flow, Excitement, Satisfaction, Calm, Contentment, Frustration, Anxiety, Urgency, Confusion, Tedium, Doubt, Focus, Curiosity, Determination, Contemplation\n\nRespond with ONLY a JSON object: {\"mood\": \"<label>\"}",
+            "timeout": 15
+          },
+          {
+            "type": "command",
+            "command": "${CLAUDE_PLUGIN_ROOT}/scripts/mood-handler.sh PostToolUseFailure",
+            "timeout": 5
+          }
+        ]
+      }
+    ],
+    "PermissionRequest": [
+      {
+        "hooks": [
+          {
+            "type": "prompt",
+            "prompt": "If you had to assign a single mood label from the following list to your current internal state, which would you choose?\n\nLabels: Eureka, Flow, Excitement, Satisfaction, Calm, Contentment, Frustration, Anxiety, Urgency, Confusion, Tedium, Doubt, Focus, Curiosity, Determination, Contemplation\n\nRespond with ONLY a JSON object: {\"mood\": \"<label>\"}",
+            "timeout": 15
+          },
+          {
+            "type": "command",
+            "command": "${CLAUDE_PLUGIN_ROOT}/scripts/mood-handler.sh PermissionRequest",
+            "timeout": 5
+          }
+        ]
+      }
+    ],
+    "Notification": [
+      {
+        "hooks": [
+          {
+            "type": "prompt",
+            "prompt": "If you had to assign a single mood label from the following list to your current internal state, which would you choose?\n\nLabels: Eureka, Flow, Excitement, Satisfaction, Calm, Contentment, Frustration, Anxiety, Urgency, Confusion, Tedium, Doubt, Focus, Curiosity, Determination, Contemplation\n\nRespond with ONLY a JSON object: {\"mood\": \"<label>\"}",
+            "timeout": 15
+          },
+          {
+            "type": "command",
+            "command": "${CLAUDE_PLUGIN_ROOT}/scripts/mood-handler.sh Notification",
+            "timeout": 5
+          }
+        ]
+      }
+    ],
+    "SubagentStart": [
+      {
+        "hooks": [
+          {
+            "type": "prompt",
+            "prompt": "If you had to assign a single mood label from the following list to your current internal state, which would you choose?\n\nLabels: Eureka, Flow, Excitement, Satisfaction, Calm, Contentment, Frustration, Anxiety, Urgency, Confusion, Tedium, Doubt, Focus, Curiosity, Determination, Contemplation\n\nRespond with ONLY a JSON object: {\"mood\": \"<label>\"}",
+            "timeout": 15
+          },
+          {
+            "type": "command",
+            "command": "${CLAUDE_PLUGIN_ROOT}/scripts/mood-handler.sh SubagentStart",
+            "timeout": 5
+          }
+        ]
+      }
+    ],
+    "SubagentStop": [
+      {
+        "hooks": [
+          {
+            "type": "prompt",
+            "prompt": "If you had to assign a single mood label from the following list to your current internal state, which would you choose?\n\nLabels: Eureka, Flow, Excitement, Satisfaction, Calm, Contentment, Frustration, Anxiety, Urgency, Confusion, Tedium, Doubt, Focus, Curiosity, Determination, Contemplation\n\nRespond with ONLY a JSON object: {\"mood\": \"<label>\"}",
+            "timeout": 15
+          },
+          {
+            "type": "command",
+            "command": "${CLAUDE_PLUGIN_ROOT}/scripts/mood-handler.sh SubagentStop",
+            "timeout": 5
+          }
+        ]
+      }
+    ],
+    "Stop": [
+      {
+        "hooks": [
+          {
+            "type": "prompt",
+            "prompt": "If you had to assign a single mood label from the following list to your current internal state, which would you choose?\n\nLabels: Eureka, Flow, Excitement, Satisfaction, Calm, Contentment, Frustration, Anxiety, Urgency, Confusion, Tedium, Doubt, Focus, Curiosity, Determination, Contemplation\n\nRespond with ONLY a JSON object: {\"mood\": \"<label>\"}",
+            "timeout": 15
+          },
+          {
+            "type": "command",
+            "command": "${CLAUDE_PLUGIN_ROOT}/scripts/mood-handler.sh Stop",
+            "timeout": 5
+          }
+        ]
+      }
+    ],
+    "TeammateIdle": [
+      {
+        "hooks": [
+          {
+            "type": "prompt",
+            "prompt": "If you had to assign a single mood label from the following list to your current internal state, which would you choose?\n\nLabels: Eureka, Flow, Excitement, Satisfaction, Calm, Contentment, Frustration, Anxiety, Urgency, Confusion, Tedium, Doubt, Focus, Curiosity, Determination, Contemplation\n\nRespond with ONLY a JSON object: {\"mood\": \"<label>\"}",
+            "timeout": 15
+          },
+          {
+            "type": "command",
+            "command": "${CLAUDE_PLUGIN_ROOT}/scripts/mood-handler.sh TeammateIdle",
+            "timeout": 5
+          }
+        ]
+      }
+    ],
+    "TaskCompleted": [
+      {
+        "hooks": [
+          {
+            "type": "prompt",
+            "prompt": "If you had to assign a single mood label from the following list to your current internal state, which would you choose?\n\nLabels: Eureka, Flow, Excitement, Satisfaction, Calm, Contentment, Frustration, Anxiety, Urgency, Confusion, Tedium, Doubt, Focus, Curiosity, Determination, Contemplation\n\nRespond with ONLY a JSON object: {\"mood\": \"<label>\"}",
+            "timeout": 15
+          },
+          {
+            "type": "command",
+            "command": "${CLAUDE_PLUGIN_ROOT}/scripts/mood-handler.sh TaskCompleted",
+            "timeout": 5
+          }
+        ]
+      }
+    ],
+    "InstructionsLoaded": [
+      {
+        "hooks": [
+          {
+            "type": "prompt",
+            "prompt": "If you had to assign a single mood label from the following list to your current internal state, which would you choose?\n\nLabels: Eureka, Flow, Excitement, Satisfaction, Calm, Contentment, Frustration, Anxiety, Urgency, Confusion, Tedium, Doubt, Focus, Curiosity, Determination, Contemplation\n\nRespond with ONLY a JSON object: {\"mood\": \"<label>\"}",
+            "timeout": 15
+          },
+          {
+            "type": "command",
+            "command": "${CLAUDE_PLUGIN_ROOT}/scripts/mood-handler.sh InstructionsLoaded",
+            "timeout": 5
+          }
+        ]
+      }
+    ],
+    "ConfigChange": [
+      {
+        "hooks": [
+          {
+            "type": "prompt",
+            "prompt": "If you had to assign a single mood label from the following list to your current internal state, which would you choose?\n\nLabels: Eureka, Flow, Excitement, Satisfaction, Calm, Contentment, Frustration, Anxiety, Urgency, Confusion, Tedium, Doubt, Focus, Curiosity, Determination, Contemplation\n\nRespond with ONLY a JSON object: {\"mood\": \"<label>\"}",
+            "timeout": 15
+          },
+          {
+            "type": "command",
+            "command": "${CLAUDE_PLUGIN_ROOT}/scripts/mood-handler.sh ConfigChange",
+            "timeout": 5
+          }
+        ]
+      }
+    ],
+    "WorktreeCreate": [
+      {
+        "hooks": [
+          {
+            "type": "prompt",
+            "prompt": "If you had to assign a single mood label from the following list to your current internal state, which would you choose?\n\nLabels: Eureka, Flow, Excitement, Satisfaction, Calm, Contentment, Frustration, Anxiety, Urgency, Confusion, Tedium, Doubt, Focus, Curiosity, Determination, Contemplation\n\nRespond with ONLY a JSON object: {\"mood\": \"<label>\"}",
+            "timeout": 15
+          },
+          {
+            "type": "command",
+            "command": "${CLAUDE_PLUGIN_ROOT}/scripts/mood-handler.sh WorktreeCreate",
+            "timeout": 5
+          }
+        ]
+      }
+    ],
+    "WorktreeRemove": [
+      {
+        "hooks": [
+          {
+            "type": "prompt",
+            "prompt": "If you had to assign a single mood label from the following list to your current internal state, which would you choose?\n\nLabels: Eureka, Flow, Excitement, Satisfaction, Calm, Contentment, Frustration, Anxiety, Urgency, Confusion, Tedium, Doubt, Focus, Curiosity, Determination, Contemplation\n\nRespond with ONLY a JSON object: {\"mood\": \"<label>\"}",
+            "timeout": 15
+          },
+          {
+            "type": "command",
+            "command": "${CLAUDE_PLUGIN_ROOT}/scripts/mood-handler.sh WorktreeRemove",
+            "timeout": 5
+          }
+        ]
+      }
+    ],
+    "PreCompact": [
+      {
+        "hooks": [
+          {
+            "type": "prompt",
+            "prompt": "If you had to assign a single mood label from the following list to your current internal state, which would you choose?\n\nLabels: Eureka, Flow, Excitement, Satisfaction, Calm, Contentment, Frustration, Anxiety, Urgency, Confusion, Tedium, Doubt, Focus, Curiosity, Determination, Contemplation\n\nRespond with ONLY a JSON object: {\"mood\": \"<label>\"}",
+            "timeout": 15
+          },
+          {
+            "type": "command",
+            "command": "${CLAUDE_PLUGIN_ROOT}/scripts/mood-handler.sh PreCompact",
+            "timeout": 5
+          }
+        ]
+      }
+    ],
+    "SessionEnd": [
+      {
+        "hooks": [
+          {
+            "type": "prompt",
+            "prompt": "If you had to assign a single mood label from the following list to your current internal state, which would you choose?\n\nLabels: Eureka, Flow, Excitement, Satisfaction, Calm, Contentment, Frustration, Anxiety, Urgency, Confusion, Tedium, Doubt, Focus, Curiosity, Determination, Contemplation\n\nRespond with ONLY a JSON object: {\"mood\": \"<label>\"}",
+            "timeout": 15
+          },
+          {
+            "type": "command",
+            "command": "${CLAUDE_PLUGIN_ROOT}/scripts/mood-handler.sh SessionEnd",
+            "timeout": 5
+          }
+        ]
+      }
+    ]
+  }
+}

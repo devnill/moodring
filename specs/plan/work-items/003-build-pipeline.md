@@ -44,7 +44,7 @@ echo "Done. WAV files written to sounds/"
 
 ### Submodule Setup
 ```bash
-cd /Users/dan/code/moodring2/plugin
+cd /Users/dan/code/moodring/plugin
 git submodule add ~/code/synth synth
 ```
 
