@@ -1,0 +1,18 @@
+{
+  "name": "moodring-marketplace",
+  "owner": {
+    "name": "Dan Singer"
+  },
+  "metadata": {
+    "description": "Moodring plugin marketplace",
+    "version": "1.0.0"
+  },
+  "plugins": [
+    {
+      "name": "moodring",
+      "source": "./",
+      "description": "Sonifies an AI model's self-reported internal state by playing mood-mapped synthesized sounds",
+      "version": "1.0.0"
+    }
+  ]
+}
