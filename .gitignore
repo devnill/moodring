@@ -15,3 +15,4 @@ build/
 
 # Generated sounds output
 output/
+specs/metrics.jsonl
