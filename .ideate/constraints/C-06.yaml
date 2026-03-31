@@ -1,0 +1,10 @@
+id: C-06
+type: constraint
+category: design
+status: active
+description: "Prompt-type hooks for mood capture. Mood checks use `\"type\": \"prompt\"` hooks to run in the same Claude session context. This is non-negotiable — the experiment requires the same model instance."
+cycle_created: 1
+cycle_modified: null
+content_hash: f1af4e50c9392cf38923e207382213f092d62216ba5846c8825b4443ce0ced26
+token_count: 92
+file_path: .ideate/constraints/C-06.yaml

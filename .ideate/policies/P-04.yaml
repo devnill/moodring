@@ -1,0 +1,14 @@
+id: P-04
+type: domain_policy
+domain: mood-capture
+status: active
+derived_from:
+  - GP-1 (Experimental Neutrality) + constraint C7
+established: planning phase
+amended: null
+description: The model selects from exactly 16 PascalCase mood labels. Free-form mood expression is not permitted in v1. Vocabulary changes require a deliberate decision, not ad-hoc edits.
+cycle_created: 1
+cycle_modified: null
+content_hash: "2e452114cff59b8dd1bc9a51ee6460557c59fea4371e61ebdebdc696be9f428b"
+token_count: 115
+file_path: .ideate/policies/P-04.yaml

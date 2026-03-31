@@ -1,0 +1,10 @@
+id: C-10
+type: constraint
+category: process
+status: active
+description: Synth as git submodule. Following beepboop's pattern, synth should be included as a git submodule, not vendored or installed globally.
+cycle_created: 1
+cycle_modified: null
+content_hash: cf074e799d2068fa8832b49149247a1423418153f7ea02e02fbe6d3b3b6af657
+token_count: 76
+file_path: .ideate/constraints/C-10.yaml

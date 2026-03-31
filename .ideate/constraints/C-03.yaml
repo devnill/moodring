@@ -1,0 +1,10 @@
+id: C-03
+type: constraint
+category: technology
+status: active
+description: "Claude Code plugin system. The plugin must conform to the Claude Code plugin directory structure: `.claude-plugin/plugin.json` manifest, `hooks/hooks.json` for hook configuration, `skills/` for any slash commands, `scripts/` for shell scripts."
+cycle_created: 1
+cycle_modified: null
+content_hash: "73555472c51ebdb41a5840246d61896f6c56b57faca98b193091b636c2b375ca"
+token_count: 104
+file_path: .ideate/constraints/C-03.yaml

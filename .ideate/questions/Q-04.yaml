@@ -1,0 +1,14 @@
+id: Q-04
+type: domain_question
+domain: plugin-infrastructure
+status: open
+impact: Build artifacts accumulate in the repository. __pycache__ is already present.
+source: archive/cycles/001/gap-analysis.md (MI2); archive/cycles/001/code-quality.md (M1)
+resolution: null
+resolved_in: null
+description: Should a .gitignore be added and __pycache__ removed from tracking?
+cycle_created: 1
+cycle_modified: null
+content_hash: d3019b1b8e038667290567a82e9baad6c259269a3c8f84abf551fdf86146d548
+token_count: 118
+file_path: .ideate/questions/Q-04.yaml

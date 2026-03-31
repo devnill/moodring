@@ -1,0 +1,11 @@
+id: GP-06
+type: guiding_principle
+name: Follow the Beepboop Pattern
+status: active
+description: The plugin structure, hook configuration, shell scripts, and synth integration should follow the established patterns in the beepboop plugin. This is a proven architecture for Claude Code audio plugins. Deviate only when Moodring's requirements demand it.
+amendment_history: []
+cycle_created: 1
+cycle_modified: null
+content_hash: "5cc1ffa281a118d343c2767f5e6327f3b81b72bde7589a95d34ba20664b14e3d"
+token_count: 118
+file_path: .ideate/principles/GP-06.yaml

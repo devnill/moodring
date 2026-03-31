@@ -1,0 +1,13 @@
+id: D-02
+type: domain_decision
+domain: plugin-infrastructure
+status: settled
+cycle: 1
+supersedes: null
+description: "settings.json exposes exactly two user-facing settings: muted (boolean) and poll_interval (duration string). volume and player are internal implementation fields."
+rationale: Minimal configuration principle. Plugin should work out of the box.
+cycle_created: 1
+cycle_modified: null
+content_hash: "0c0fcf6e0f7fd76f4f1545e94d2b220207447c5ba4cb94e3a26404160a958c6b"
+token_count: 115
+file_path: .ideate/decisions/D-02.yaml

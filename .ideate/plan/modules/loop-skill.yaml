@@ -1,0 +1,25 @@
+id: module_spec-loop-skill
+type: module_spec
+name: Loop Skill
+scope: |
+  Defines the `/moodring:loop` slash command that starts periodic mood polling. This is a Claude Code skill (markdown file) that instructs the model to repeatedly check its mood on a timer.
+  
+  NOT responsible for: the mood prompt text (uses the canonical prompt from `mood-prompt`), sound playback, or log writing (those are triggered via `mood-handler`).
+provides:
+  - "`loop.md` — Skill definition at `commands/loop.md`"
+  - "- Slash command: `/moodring:loop`"
+  - "- Behavior: Starts a polling loop that periodically captures mood"
+requires:
+  - "Mood prompt text (from: `mood-prompt`) — The prompt to present to itself on each poll"
+  - "`mood-handler.sh` (from: `mood-handler`) — Called via Bash tool after each mood response"
+  - "`settings.json` (from: `settings`) — Read for `poll_interval`"
+boundary_rules:
+  - The skill instructs the model; it does not execute code directly
+  - Polling is approximate — the model follows timing instructions but is not a precise timer
+  - The loop must be interruptible (user can type to stop it)
+  - Must read `poll_interval` from settings at loop start
+  - Must use the canonical mood prompt (same as hooks use)
+  - Must call `mood-handler.sh` after each mood self-assessment
+  - Must not perform any analysis of mood trends or patterns
+content_hash: "2f7747404a4deea9981358fc7969a2faae39831e44cbec73ec9750a8b4ac73b3"
+token_count: 333

@@ -1,0 +1,14 @@
+id: Q-01
+type: domain_question
+domain: plugin-infrastructure
+status: open
+impact: Loop skill Bash commands fail silently when CLAUDE_PLUGIN_ROOT is unset. Supplementary polling path becomes non-functional.
+source: archive/cycles/001/code-quality.md (S1); archive/cycles/001/decision-log.md (OQ1, CR1)
+resolution: null
+resolved_in: null
+description: Should the find-based CLAUDE_PLUGIN_ROOT fallback from the config skill be copied into the loop skill?
+cycle_created: 1
+cycle_modified: null
+content_hash: e7afe0dd46ba64b51ba62027ba5a3b4cb5abfa54fda5a9eb9d4e2dc570906495
+token_count: 139
+file_path: .ideate/questions/Q-01.yaml

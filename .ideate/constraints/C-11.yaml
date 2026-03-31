@@ -1,0 +1,10 @@
+id: C-11
+type: constraint
+category: process
+status: active
+description: Build-time sound generation. A `generate.sh` script runs `synth generate` to produce WAV files. These are committed to the plugin directory so the plugin works without running the build step.
+cycle_created: 1
+cycle_modified: null
+content_hash: d18d535f3e0c8b81b0de0145777ec981eb2025a580c86ddf514950e5ef41ee65
+token_count: 91
+file_path: .ideate/constraints/C-11.yaml

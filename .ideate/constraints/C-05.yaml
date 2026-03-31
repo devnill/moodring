@@ -1,0 +1,10 @@
+id: C-05
+type: constraint
+category: technology
+status: active
+description: Shell scripts (bash/zsh) for runtime. Hook handlers and playback scripts run as shell commands on macOS.
+cycle_created: 1
+cycle_modified: null
+content_hash: "7e4296eeeafcd632cdb1e5956ec016ed225de3d50e0559b8325c1679f0e318b1"
+token_count: 70
+file_path: .ideate/constraints/C-05.yaml

@@ -1,0 +1,17 @@
+id: module_spec-plugin-manifest
+type: module_spec
+name: Plugin Manifest
+scope: |
+  Defines the plugin identity for Claude Code's plugin system. This is the `.claude-plugin/plugin.json` file that registers Moodring as a plugin.
+  
+  NOT responsible for: hook configuration, settings, or any runtime behavior.
+provides:
+  - "`plugin.json` — Plugin manifest file at `.claude-plugin/plugin.json`"
+requires:
+  - Nothing. This module has no dependencies on other modules.
+boundary_rules:
+  - Must conform to Claude Code's plugin manifest schema
+  - "Contains only static metadata: name, version, description, author, license"
+  - No runtime logic
+content_hash: bc8781e61469fd8330344908dbf19cfa71c6e6a9e13d9a273b5462000dabf7d8
+token_count: 160

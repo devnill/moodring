@@ -1,0 +1,11 @@
+id: GP-01
+type: guiding_principle
+name: Experimental Neutrality
+status: active
+description: The mood check prompt must not bias the model toward reporting any particular state. No leading language, no suggestion that having emotions is expected or desirable, no framing that rewards interesting answers. The prompt presents a forced-choice task with a fixed vocabulary. The validity of the experiment depends on this neutrality.
+amendment_history: []
+cycle_created: 1
+cycle_modified: null
+content_hash: "55baf95d36f2ea914da853436fee1bc28150f390e04d1d5a2ed4458b913ebb9c"
+token_count: 138
+file_path: .ideate/principles/GP-01.yaml

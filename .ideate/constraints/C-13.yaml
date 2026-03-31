@@ -1,0 +1,10 @@
+id: C-13
+type: constraint
+category: scope
+status: active
+description: No cross-model comparison. v1 does not include tooling to compare moods across different models. The JSONL format enables this externally.
+cycle_created: 1
+cycle_modified: null
+content_hash: "40041389320fefcc0b71178296b3be34b9b80d07ff6a8b3d4a5576b348bdfef3"
+token_count: 77
+file_path: .ideate/constraints/C-13.yaml

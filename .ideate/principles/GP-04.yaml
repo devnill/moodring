@@ -1,0 +1,11 @@
+id: GP-04
+type: guiding_principle
+name: Immediate Feedback
+status: active
+description: Sound plays the instant a mood is detected. The user should experience a direct cause-and-effect relationship between the model's activity and the auditory output. No queuing, no batching, no smoothing.
+amendment_history: []
+cycle_created: 1
+cycle_modified: null
+content_hash: "5a4016f443274462aee5ba1c36d97382db5ebe8acaaa6f281ac748a3de57ecbd"
+token_count: 103
+file_path: .ideate/principles/GP-04.yaml

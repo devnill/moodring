@@ -1,0 +1,10 @@
+id: C-07
+type: constraint
+category: design
+status: active
+description: Fixed 16-mood vocabulary. The mood palette is fixed at 16 labels. The model chooses from this list. No free-form mood expression.
+cycle_created: 1
+cycle_modified: null
+content_hash: "5a5f76a320f771d48b2e6048a157699b92fd6de25cf46411d9e7cb56b320dcc6"
+token_count: 75
+file_path: .ideate/constraints/C-07.yaml

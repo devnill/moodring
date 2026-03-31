@@ -1,0 +1,11 @@
+id: GP-02
+type: guiding_principle
+name: Non-Interference
+status: active
+description: The mood-checking mechanism must not disrupt the model's primary work. It runs in the same session context but should be lightweight enough that it does not degrade task performance. The mood response is a single label — no summarization, no reflection, no secondary inference that could alter the model's state.
+amendment_history: []
+cycle_created: 1
+cycle_modified: null
+content_hash: "6b01ef7eb1df0a474ff5c2ac442f78b69da2ba90d0a3567a262407e3e9fc4f13"
+token_count: 130
+file_path: .ideate/principles/GP-02.yaml

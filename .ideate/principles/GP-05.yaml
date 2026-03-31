@@ -1,0 +1,11 @@
+id: GP-05
+type: guiding_principle
+name: Pre-rendered Sounds
+status: active
+description: All mood sounds are generated at build time using the synth tool, not at runtime. This ensures consistent audio, zero runtime synthesis latency, and a clean separation between sound design and mood detection.
+amendment_history: []
+cycle_created: 1
+cycle_modified: null
+content_hash: "2d01e21dfd6e90b22c0565a2186745ec42681fc8b46ec4c66bd57c6bfe2765bd"
+token_count: 105
+file_path: .ideate/principles/GP-05.yaml

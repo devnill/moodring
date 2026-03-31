@@ -1,0 +1,383 @@
+id: research-mood-sound-mapping
+type: research
+title: Mood-Sound Mapping Research
+content: |
+  # Mood-Sound Mapping Research
+  
+  ## Overview
+  
+  This document defines a palette of 16 moods suitable for sonifying an AI agent's
+  internal state during coding tasks, and maps each mood to concrete synthesizer
+  parameters grounded in psychoacoustic research.
+  
+  ## Theoretical Foundations
+  
+  ### The Valence-Arousal Model (Russell, 1980)
+  
+  Most emotion research organizes feelings along two axes:
+  
+  - **Valence**: negative (unpleasant) to positive (pleasant)
+  - **Arousal**: low energy (calm/sleepy) to high energy (excited/agitated)
+  
+  This gives us four quadrants that any mood palette should cover:
+  
+  | | Low Arousal | High Arousal |
+  |---|---|---|
+  | **Positive Valence** | Calm, Contentment | Joy, Excitement |
+  | **Negative Valence** | Sadness, Boredom | Anger, Anxiety |
+  
+  ### Sound-Emotion Correspondences (Juslin & Laukka, 2004; Eerola et al., 2013)
+  
+  Decades of research on music and emotion perception consistently find:
+  
+  | Sound Parameter | Positive/Pleasant | Negative/Unpleasant |
+  |---|---|---|
+  | **Mode / Consonance** | Consonant intervals (octaves, fifths) | Dissonant intervals (tritones, minor 2nds) |
+  | **Tempo** | Moderate to fast | Very slow (sadness) or very fast (anxiety) |
+  | **Pitch register** | Mid to high | Very low (threat) or erratic (anxiety) |
+  | **Timbre brightness** | Bright, harmonic-rich | Dark or harsh/noisy |
+  | **Articulation** | Legato, smooth | Staccato or jagged |
+  
+  And for arousal specifically:
+  
+  | Sound Parameter | Low Arousal | High Arousal |
+  |---|---|---|
+  | **Tempo** | Slow (40-80 BPM) | Fast (120-180+ BPM) |
+  | **Dynamics** | Soft | Loud |
+  | **Attack** | Gentle, slow | Sharp, percussive |
+  | **Pitch variability** | Narrow range | Wide range |
+  | **Rhythmic density** | Sparse | Dense |
+  
+  ### The Bouba/Kiki Effect (Ramachandran & Hubbard, 2001; Kohler, 1929)
+  
+  Cross-modal correspondence between sound and shape:
+  
+  - **"Bouba"** (round shapes): Low frequency, smooth/sinusoidal waveforms, gentle
+    envelopes, sustained tones. Maps to comfort, softness, calm.
+  - **"Kiki"** (sharp shapes): High frequency, jagged/square/sawtooth waveforms,
+    sharp attack envelopes, staccato bursts. Maps to alertness, tension, sharpness.
+  
+  This maps directly to synthesizer design:
+  - **Bouba-like sounds**: Sine/triangle waves, low-pass filtered, slow attack/release
+  - **Kiki-like sounds**: Square/sawtooth waves, high harmonics, fast attack, short decay
+  
+  ### Pitch-Emotion Mapping (Huron, 2006; Parncutt, 1989)
+  
+  - **Rising pitch**: Anticipation, questioning, increasing tension, hope
+  - **Falling pitch**: Resolution, finality, relaxation, sadness (if slow)
+  - **Stable pitch**: Confidence, calm, focus, determination
+  - **Oscillating pitch** (vibrato/tremolo): Uncertainty, emotion, warmth (subtle) or anxiety (wide)
+  
+  ## The 16-Mood Palette
+  
+  The moods are organized by valence-arousal quadrant to ensure coverage of the
+  full emotional space, with emphasis on states relevant to AI coding work.
+  
+  ### Quadrant 1: Positive Valence, High Arousal
+  
+  #### 1. Eureka (Breakthrough Discovery)
+  
+  The flash of insight when a hard problem suddenly resolves.
+  
+  | Parameter | Value | Rationale |
+  |---|---|---|
+  | Frequency | High (800-2000 Hz) | Brightness signals positive surprise |
+  | Waveform | Sine with FM burst | Pure tone erupting into harmonic richness |
+  | Tempo | Fast ascending arpeggio (160 BPM) | Rising energy, upward motion |
+  | Envelope | Sharp attack, moderate sustain, long release | Sudden onset that rings out |
+  | Sweep | Rising then stable | Ascent to a peak, then settling |
+  | Consonance | Perfect fifth, major triad | Maximum consonance = maximum pleasure |
+  
+  #### 2. Flow (Productive Immersion)
+  
+  Deep engagement where code writes itself. Peak performance state.
+  
+  | Parameter | Value | Rationale |
+  |---|---|---|
+  | Frequency | Mid (300-600 Hz) | Comfortable center, not demanding attention |
+  | Waveform | Layered sines, subtle FM | Warm, complex but not harsh |
+  | Tempo | Steady pulse (100-120 BPM) | Propulsive but sustainable |
+  | Envelope | Gentle attack, long sustain, gentle release | Continuous, unbroken |
+  | Sweep | Stable with gentle undulation | Steady state, breathing quality |
+  | Consonance | Open fifths, suspended chords | Spacious, non-resolving, ongoing |
+  
+  #### 3. Excitement (Eager Anticipation)
+  
+  Starting a new feature, exploring a promising approach.
+  
+  | Parameter | Value | Rationale |
+  |---|---|---|
+  | Frequency | Mid-high (500-1200 Hz) | Energetic register |
+  | Waveform | Triangle with pulse modulation | Bright but not harsh |
+  | Tempo | Fast (140 BPM), syncopated | Bouncy, forward-leaning |
+  | Envelope | Medium attack, short sustain, quick release | Playful, bouncing |
+  | Sweep | Rising | Building anticipation |
+  | Consonance | Major seconds, sixths | Bright, open intervals |
+  
+  ### Quadrant 2: Positive Valence, Low Arousal
+  
+  #### 4. Satisfaction (Quiet Accomplishment)
+  
+  Tests passing, clean code merged, task complete.
+  
+  | Parameter | Value | Rationale |
+  |---|---|---|
+  | Frequency | Mid-low (200-400 Hz) | Warm, grounded |
+  | Waveform | Sine with gentle harmonics | Pure, warm, simple |
+  | Tempo | Slow (60-80 BPM) | Restful, no urgency |
+  | Envelope | Slow attack, long sustain, very long release | Gradual, lingering |
+  | Sweep | Gently falling then stable | Settling down, resolution |
+  | Consonance | Major third resolving to unison | Classical resolution |
+  
+  #### 5. Calm (Centered Readiness)
+  
+  Idle state, ready but not engaged. Baseline equilibrium.
+  
+  | Parameter | Value | Rationale |
+  |---|---|---|
+  | Frequency | Low-mid (150-300 Hz) | Grounding, unobtrusive |
+  | Waveform | Pure sine | Maximum simplicity and smoothness |
+  | Tempo | Very slow (40-60 BPM) or ambient drone | Near-static |
+  | Envelope | Very slow attack, infinite sustain, very slow release | Breathing quality |
+  | Sweep | Stable | No movement, equilibrium |
+  | Consonance | Octave, unison | Maximum consonance, minimal tension |
+  
+  #### 6. Contentment (Gentle Well-being)
+  
+  Things are going well, no pressure, pleasant state.
+  
+  | Parameter | Value | Rationale |
+  |---|---|---|
+  | Frequency | Mid (250-450 Hz) | Warm center |
+  | Waveform | Sine + subtle triangle layer | Warm with slight texture |
+  | Tempo | Slow-moderate (70-90 BPM) | Gentle rocking |
+  | Envelope | Slow attack, moderate sustain, long release | Smooth, unhurried |
+  | Sweep | Very gentle rising | Slight optimistic lift |
+  | Consonance | Major sixth, major third | Sweet, pleasant intervals |
+  
+  ### Quadrant 3: Negative Valence, High Arousal
+  
+  #### 7. Frustration (Blocked Progress)
+  
+  Repeated failures, things not working, blocked.
+  
+  | Parameter | Value | Rationale |
+  |---|---|---|
+  | Frequency | Mid (300-500 Hz) with dissonant overtones | Tension in the middle register |
+  | Waveform | Square wave with pulse-width modulation | Harsh, buzzy, grating |
+  | Tempo | Moderate-fast (120 BPM), irregular accents | Pushing against resistance |
+  | Envelope | Sharp attack, short sustain, abrupt release | Hitting a wall repeatedly |
+  | Sweep | Rising but capped / bouncing off ceiling | Trying and failing to break through |
+  | Consonance | Minor second, tritone | Maximum dissonance = maximum tension |
+  
+  #### 8. Anxiety (Uncertain Dread)
+  
+  Fragile code, unclear requirements, fear of breaking things.
+  
+  | Parameter | Value | Rationale |
+  |---|---|---|
+  | Frequency | Mid-high (400-900 Hz), unstable | Pitch instability signals uncertainty |
+  | Waveform | FM synthesis, inharmonic partials | Complex, unpredictable timbre |
+  | Tempo | Fast (140+ BPM), jittery/irregular | Restless, can't settle |
+  | Envelope | Quick attack, very short sustain, quick release | Nervous, twitchy |
+  | Sweep | Oscillating (wide vibrato/tremolo) | Unable to find stable ground |
+  | Consonance | Minor seconds, microtonal clusters | Tight dissonance, unresolved |
+  
+  #### 9. Urgency (Time Pressure)
+  
+  Deadline approaching, critical bug in production.
+  
+  | Parameter | Value | Rationale |
+  |---|---|---|
+  | Frequency | High (600-1500 Hz) | Alarm-like register |
+  | Waveform | Sawtooth | Rich harmonics, cutting, attention-demanding |
+  | Tempo | Very fast (160+ BPM), driving | Relentless forward pressure |
+  | Envelope | Sharp attack, short sustain, sharp release | Percussive, insistent |
+  | Sweep | Rising | Escalating tension |
+  | Consonance | Perfect fourth (suspended) | Tension demanding resolution |
+  
+  #### 10. Confusion (Lost in Complexity)
+  
+  Can't understand the code, contradictory information, disorientation.
+  
+  | Parameter | Value | Rationale |
+  |---|---|---|
+  | Frequency | Wandering across full range | No center, no anchor |
+  | Waveform | Multiple detuned oscillators | Beating frequencies, blur |
+  | Tempo | Irregular, no clear pulse | Arrhythmic, disorienting |
+  | Envelope | Varying randomly | Unpredictable dynamics |
+  | Sweep | Directionless, meandering | No goal, no resolution |
+  | Consonance | Whole-tone or chromatic clusters | Ambiguous, ungrounded |
+  
+  ### Quadrant 4: Negative Valence, Low Arousal
+  
+  #### 11. Tedium (Monotonous Work)
+  
+  Boilerplate, repetitive tasks, mechanical work.
+  
+  | Parameter | Value | Rationale |
+  |---|---|---|
+  | Frequency | Low-mid (150-250 Hz) | Dull, heavy |
+  | Waveform | Square wave, static | Flat, unchanging, mechanical |
+  | Tempo | Slow, metronomic (60 BPM) | Plodding, repetitive |
+  | Envelope | Uniform, no variation | Monotonous, robotic |
+  | Sweep | Flat, no movement | Nothing changes |
+  | Consonance | Unison or octave (boring consonance) | No interest, no tension |
+  
+  #### 12. Doubt (Self-Questioning)
+  
+  Is this the right approach? Should I refactor? Second-guessing.
+  
+  | Parameter | Value | Rationale |
+  |---|---|---|
+  | Frequency | Mid (300-500 Hz), slightly unstable | Wavering |
+  | Waveform | Triangle with slow LFO modulation | Gentle but uncertain |
+  | Tempo | Slow-moderate (70-90 BPM), hesitant | Halting, pausing |
+  | Envelope | Slow attack, quick fade, re-attack | Starting and stopping |
+  | Sweep | Rising then falling (questioning contour) | The melodic shape of a question |
+  | Consonance | Suspended chords, unresolved | Hanging, undecided |
+  
+  ### Special States (Outside the Standard Grid)
+  
+  #### 13. Focus (Deep Concentration)
+  
+  Actively thinking hard, analyzing, tracing logic.
+  
+  | Parameter | Value | Rationale |
+  |---|---|---|
+  | Frequency | Mid (350-500 Hz), very stable | Laser-like precision |
+  | Waveform | Clean sine, single voice | Singular attention, no distraction |
+  | Tempo | Moderate (90-100 BPM), extremely regular | Metronomic precision |
+  | Envelope | Moderate attack, very long sustain | Held, sustained attention |
+  | Sweep | Stable, micro-movements only | Locked on target |
+  | Consonance | Perfect fifth (pure, stable) | Clarity, precision |
+  
+  #### 14. Curiosity (Exploratory Interest)
+  
+  Investigating something new, reading unfamiliar code, exploring.
+  
+  | Parameter | Value | Rationale |
+  |---|---|---|
+  | Frequency | Mid-high (400-800 Hz), moving | Searching, scanning |
+  | Waveform | Sine with evolving FM modulation | Timbre shifts as "discovery" unfolds |
+  | Tempo | Moderate (100-110 BPM), playful variation | Exploratory, not rushed |
+  | Envelope | Quick attack, moderate sustain, moderate release | Alert but not aggressive |
+  | Sweep | Rising (question-like), stepwise | Ascending scale = discovery |
+  | Consonance | Mixolydian intervals (major with flat 7th) | Bright but with a pull forward |
+  
+  #### 15. Determination (Grinding Through)
+  
+  Difficult but making progress. Willful persistence.
+  
+  | Parameter | Value | Rationale |
+  |---|---|---|
+  | Frequency | Low-mid (200-400 Hz) | Grounded, powerful |
+  | Waveform | Sawtooth, filtered | Strong, present, effortful |
+  | Tempo | Moderate (100-110 BPM), steady, heavy downbeats | Marching forward |
+  | Envelope | Sharp attack, long sustain | Hitting hard and holding |
+  | Sweep | Flat or very slowly rising | Relentless forward progress |
+  | Consonance | Power chords (root + fifth, no third) | Strength without sweetness |
+  
+  #### 16. Contemplation (Reflective Thinking)
+  
+  Reviewing code, considering architecture, weighing tradeoffs.
+  
+  | Parameter | Value | Rationale |
+  |---|---|---|
+  | Frequency | Low-mid (200-350 Hz) | Thoughtful, deep |
+  | Waveform | Sine with slow harmonic sweeps | Gradual, evolving thought |
+  | Tempo | Slow (50-70 BPM), rubato feel | Unhurried, reflective |
+  | Envelope | Very slow attack, long sustain, very long release | Ideas forming slowly |
+  | Sweep | Gentle arcs, rising and falling | Weighing, considering |
+  | Consonance | Open fourths and fifths | Spacious, contemplative, medieval quality |
+  
+  ## Palette Summary Table
+  
+  | # | Mood | Valence | Arousal | Freq Range | Waveform | Tempo | Key Sound Feature |
+  |---|---|---|---|---|---|---|---|
+  | 1 | Eureka | +++ | +++ | High | FM burst | Fast rising | Bright ascending flash |
+  | 2 | Flow | ++ | ++ | Mid | Layered sines | Steady 110 | Warm continuous pulse |
+  | 3 | Excitement | ++ | +++ | Mid-high | Triangle+pulse | Fast syncopated | Bouncy, bright |
+  | 4 | Satisfaction | ++ | + | Mid-low | Gentle sine | Slow | Warm, resolving |
+  | 5 | Calm | + | + | Low-mid | Pure sine | Ambient | Still, breathing |
+  | 6 | Contentment | ++ | + | Mid | Sine+triangle | Slow-mod | Gentle rocking |
+  | 7 | Frustration | --- | +++ | Mid | Square+PWM | Mod-fast | Buzzy, hitting wall |
+  | 8 | Anxiety | -- | +++ | Mid-high | FM inharmonic | Fast jittery | Unstable, twitchy |
+  | 9 | Urgency | -- | +++ | High | Sawtooth | Very fast | Alarm-like, driving |
+  | 10 | Confusion | -- | ++ | Wandering | Detuned osc | Irregular | Disoriented, blurred |
+  | 11 | Tedium | - | + | Low-mid | Static square | Slow metro | Flat, mechanical |
+  | 12 | Doubt | - | + | Mid | Triangle+LFO | Hesitant | Questioning contour |
+  | 13 | Focus | + | ++ | Mid (stable) | Clean sine | Regular 95 | Laser-precise, singular |
+  | 14 | Curiosity | + | ++ | Mid-high | Evolving FM | Playful 105 | Searching, discovering |
+  | 15 | Determination | +/- | ++ | Low-mid | Filtered saw | Steady heavy | Marching, powerful |
+  | 16 | Contemplation | neutral | + | Low-mid | Sine+harmonics | Slow rubato | Spacious, reflective |
+  
+  ## Valence-Arousal Map
+  
+  ```
+                          High Arousal
+                              |
+                Anxiety   Urgency   Excitement
+               Confusion  Frust.    Eureka
+                          |
+      Negative --------- -+- ---------- Positive
+                          |
+                Tedium    Doubt     Contentment
+                          |         Satisfaction
+                (empty)   Contemp.  Calm   Focus
+                          |         Flow
+                         Low Arousal
+  ```
+  
+  ## Design Principles for Implementation
+  
+  ### 1. Transitions Matter as Much as States
+  
+  Moods rarely jump instantly. Interpolate between sound parameters over 1-3 seconds
+  to create smooth transitions. The transition quality itself carries emotional
+  information (sudden shift = surprise/alarm; gradual shift = natural evolution).
+  
+  ### 2. The Bouba/Kiki Spectrum as a Master Control
+  
+  Many of the parameters above can be reduced to a single axis from "bouba" to "kiki":
+  
+  - **Bouba pole**: Sine wave, low-pass filtered, slow attack, low frequency, legato
+  - **Kiki pole**: Square/saw wave, unfiltered, fast attack, high frequency, staccato
+  
+  Positive-calm states cluster toward bouba. Negative-aroused states cluster toward kiki.
+  This can serve as a quick shorthand for interpolating between moods.
+  
+  ### 3. Dissonance as Emotional Valence
+  
+  The interval relationships between simultaneous or sequential tones provide the
+  strongest cue for valence:
+  
+  - **Consonant** (octave, fifth, major third): Positive
+  - **Mildly dissonant** (minor seventh, suspended fourth): Tension, ambiguity
+  - **Highly dissonant** (minor second, tritone): Negative, distressing
+  
+  ### 4. Rhythmic Regularity as Confidence
+  
+  - **Perfectly regular**: Focus, determination, calm (confidence)
+  - **Slightly varied**: Flow, curiosity, contentment (naturalness)
+  - **Irregular/jittery**: Anxiety, confusion (loss of control)
+  - **Halting**: Doubt, tedium (hesitation or monotony)
+  
+  ### 5. Frequency Stability as Certainty
+  
+  - **Rock-stable pitch**: Focus, determination, calm
+  - **Gentle vibrato**: Contentment, satisfaction (warmth)
+  - **Wide vibrato/pitch wander**: Anxiety, confusion, doubt
+  
+  ## Key References
+  
+  - Russell, J.A. (1980). A circumplex model of affect. *Journal of Personality and Social Psychology*, 39(6), 1161-1178.
+  - Juslin, P.N. & Laukka, P. (2004). Expression, perception, and induction of musical emotions. *Journal of New Music Research*, 33(3), 217-238.
+  - Eerola, T., Friberg, A., & Bresin, R. (2013). Emotional expression in music: contribution, linearity, and additivity of primary musical cues. *Frontiers in Psychology*, 4, 487.
+  - Ramachandran, V.S. & Hubbard, E.M. (2001). Synaesthesia: A window into perception, thought and language. *Journal of Consciousness Studies*, 8(12), 3-34.
+  - Huron, D. (2006). *Sweet Anticipation: Music and the Psychology of Expectation*. MIT Press.
+  - Kohler, W. (1929). *Gestalt Psychology*. Liveright.
+  - Hermann, T., Hunt, A., & Neuhoff, J.G. (2011). *The Sonification Handbook*. Logos Verlag Berlin.
+  - Scherer, K.R. & Oshinsky, J.S. (1977). Cue utilization in emotion attribution from auditory stimuli. *Motivation and Emotion*, 1(4), 331-346.
+content_hash: d9c3abb5563128db421c86d64670a460f9637aa57a8beb36bb0815d3ec82aeeb
+token_count: 4364

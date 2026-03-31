@@ -1,0 +1,11 @@
+id: J-000-006
+type: journal_entry
+phase: execute
+date: "2026-03-08"
+cycle_created: 0
+title: "Work item 004: Playback Script"
+content: |
+  Status: complete with rework
+  Rework: 1 significant finding fixed. Added defaults fallback when settings.json is absent, widened muted-flag grep pattern.
+content_hash: "37f9d5b6e54d9facbdab62c4f0f22ae6b17d7dcdd03d879052b3f1559f83a2c1"
+token_count: 76

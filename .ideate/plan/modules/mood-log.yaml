@@ -1,0 +1,24 @@
+id: module_spec-mood-log
+type: module_spec
+name: Mood Log
+scope: |
+  Shell script (`scripts/write-log.sh`) that appends a single JSONL entry to the mood log file. Each entry records a timestamp, mood label, and session ID.
+  
+  NOT responsible for: deciding which mood to log (that comes from `mood-handler`), reading or analyzing the log, or any visualization.
+provides:
+  - "`write-log.sh` — Shell script at `scripts/write-log.sh`"
+  - "- Invocation: `write-log.sh <MoodLabel> <SessionID>`"
+  - "- Behavior: Appends one JSON line to `mood-log.jsonl`"
+requires:
+  - Nothing from other modules at the interface level. Uses the log schema defined in the architecture.
+boundary_rules:
+  - Must exit 0 on any error
+  - Must write exactly one line per invocation
+  - Must use ISO 8601 timestamps (UTC)
+  - Log file is `${PLUGIN_ROOT}/mood-log.jsonl` — created on first write if it does not exist
+  - Must not read or parse existing log entries
+  - "Must not perform any analysis or aggregation (Constraint #12, Principle #8)"
+  - "Entries contain exactly three fields: `timestamp`, `mood`, `session_id` (Constraint #8)"
+  - Must handle concurrent writes safely (append is atomic for short lines on POSIX)
+content_hash: "2671a31ab5b3bd9e023ddce84d80295f93dad6684f6fe75fe90d1f0afa8d33c7"
+token_count: 295

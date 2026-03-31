@@ -1,0 +1,10 @@
+id: C-09
+type: constraint
+category: design
+status: active
+description: No secondary inference. The mood check must not trigger summarization, reflection, or any task that could influence the model's state. Single label response only.
+cycle_created: 1
+cycle_modified: null
+content_hash: b323e9bb4d468a1517315fc92deebbe0c1abf4c23a637c122a3ec773602c236f
+token_count: 83
+file_path: .ideate/constraints/C-09.yaml

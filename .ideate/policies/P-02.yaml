@@ -1,0 +1,14 @@
+id: P-02
+type: domain_policy
+domain: plugin-infrastructure
+status: active
+derived_from:
+  - GP-7 (Minimal Configuration)
+established: planning phase
+amended: null
+description: settings.json exposes exactly two user-facing settings. No additional configurability is added to v1 without a deliberate decision to extend scope.
+cycle_created: 1
+cycle_modified: null
+content_hash: b3cf49194013d85eef444781fc271b0a94ebe01763179f73d52ac16c7a9bb2af
+token_count: 106
+file_path: .ideate/policies/P-02.yaml

@@ -1,0 +1,10 @@
+id: C-01
+type: constraint
+category: technology
+status: active
+description: macOS audio playback via afplay. Sound playback uses the macOS `afplay` utility. No cross-platform audio abstraction required for v1.
+cycle_created: 1
+cycle_modified: null
+content_hash: b4487afe8ef2ed99188a3237800967f4c323940cc9e1d80e89f6f93fc778a38c
+token_count: 77
+file_path: .ideate/constraints/C-01.yaml

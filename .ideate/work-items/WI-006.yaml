@@ -1,0 +1,101 @@
+id: WI-006
+type: work_item
+title: Mood Handler
+status: pending
+complexity: medium
+scope:
+  - {path: scripts/mood-handler.sh, op: create}
+depends:
+  - "004"
+  - "005"
+blocks:
+  - "007"
+  - "008"
+criteria:
+  - File `scripts/mood-handler.sh` exists and is executable
+  - When stdin contains JSON with a mood label and argv[1] is a hook event name, the script extracts the mood
+  - Extracted mood is validated against the 16-label vocabulary; invalid moods cause exit 0
+  - "`play-sound.sh` is called with the mood label (in background)"
+  - "`write-log.sh` is called with the mood label and session ID (in foreground)"
+  - Session ID is extracted from stdin JSON (`session_id` field) or falls back to `"unknown"`
+  - Script exits 0 on any error (empty input, malformed JSON, missing mood, invalid mood)
+  - Script does not produce stdout/stderr that would pollute hook output
+module: null
+domain: null
+notes: |
+  # Implementation Notes: 006
+  
+  ```bash
+  #!/bin/sh
+  EVENT="${1:-}"
+  PLUGIN_ROOT="${CLAUDE_PLUGIN_ROOT:-$(cd "$(dirname "$0")/.." && pwd)}"
+  
+  # Read stdin
+  STDIN_DATA=$(cat)
+  
+  # Extract mood label — try multiple JSON paths since hook context format may vary
+  MOOD=$(echo "$STDIN_DATA" | python3 -c "
+  import sys, json, re
+  try:
+      data = json.load(sys.stdin)
+      # Try direct mood field
+      if 'mood' in data:
+          print(data['mood'])
+          sys.exit(0)
+      # Try parsing response text for JSON
+      for key in ('response', 'prompt_response', 'result'):
+          val = data.get(key, '')
+          if isinstance(val, str):
+              m = re.search(r'\"mood\"\s*:\s*\"([^\"]+)\"', val)
+              if m:
+                  print(m.group(1))
+                  sys.exit(0)
+          elif isinstance(val, dict) and 'mood' in val:
+              print(val['mood'])
+              sys.exit(0)
+      # Search entire JSON string as last resort
+      raw = json.dumps(data)
+      m = re.search(r'\"mood\"\s*:\s*\"([^\"]+)\"', raw)
+      if m:
+          print(m.group(1))
+          sys.exit(0)
+  except Exception:
+      pass
+  " 2>/dev/null)
+  
+  [ -z "$MOOD" ] && exit 0
+  
+  # Validate mood against vocabulary
+  VALID_MOODS="Eureka Flow Excitement Satisfaction Calm Contentment Frustration Anxiety Urgency Confusion Tedium Doubt Focus Curiosity Determination Contemplation"
+  echo "$VALID_MOODS" | grep -qw "$MOOD" || exit 0
+  
+  # Extract session ID
+  SESSION_ID=$(echo "$STDIN_DATA" | python3 -c "
+  import sys, json
+  try:
+      data = json.load(sys.stdin)
+      print(data.get('session_id', ''))
+  except Exception:
+      pass
+  " 2>/dev/null)
+  SESSION_ID="${SESSION_ID:-unknown}"
+  
+  # Dispatch
+  "$PLUGIN_ROOT/scripts/play-sound.sh" "$MOOD" > /dev/null 2>&1 &
+  "$PLUGIN_ROOT/scripts/write-log.sh" "$MOOD" "$SESSION_ID"
+  
+  exit 0
+  ```
+  
+  ### Key Decisions
+  - Python is used for JSON parsing because jq may not be installed; Python 3 is guaranteed on macOS
+  - Multiple extraction paths handle uncertainty about hook context JSON structure (Design Tension #1)
+  - Regex fallback searches the entire JSON string for a mood label — handles deeply nested or unexpected structures
+  - All stderr suppressed with `2>/dev/null` to prevent hook output pollution
+  - Play-sound runs in background (`&`), write-log runs in foreground (must complete before exit)
+  - Every error path exits 0
+cycle_created: 1
+cycle_modified: null
+content_hash: "21203c2f9f1b377828bb2443686687fdcfb308b6294c2227f764812ccee0f299"
+token_count: 850
+file_path: .ideate/work-items/WI-006.yaml

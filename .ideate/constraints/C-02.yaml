@@ -1,0 +1,10 @@
+id: C-02
+type: constraint
+category: technology
+status: active
+description: Synth tool for sound generation. All sounds are generated using the `synth` tool at `~/code/synth`. Sound definitions are Python functions using synth primitives (sine, square, sweep, fm, adsr, seq, silence). Output is WAV files at 44100 Hz.
+cycle_created: 1
+cycle_modified: null
+content_hash: "95cbefe811bcb23353a351b77dd3443b1caa01f3f687130179c6b7127fa93c1b"
+token_count: 104
+file_path: .ideate/constraints/C-02.yaml

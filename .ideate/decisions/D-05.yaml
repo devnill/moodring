@@ -1,0 +1,13 @@
+id: D-05
+type: domain_decision
+domain: plugin-infrastructure
+status: settled — **documentation not yet updated** (see Q-3)
+cycle: 1
+supersedes: null
+description: (a) architecture.md showing `commands/` instead of `skills/`; (b) synth.toml output_dir showing `"plugin/sounds"` instead of `"sounds"` — both are documentation errors. The implementation is correct.
+rationale: Implementation followed the more specific documents (constraints.md, work items, generate.sh working directory). Architecture doc was written before the discrepancy was noticed.
+cycle_created: 1
+cycle_modified: null
+content_hash: "580ff1fcc672cf365f082105b549278e17cc3266e2a4e52a42c54f8056738b3c"
+token_count: 164
+file_path: .ideate/decisions/D-05.yaml

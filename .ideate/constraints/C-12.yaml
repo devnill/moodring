@@ -1,0 +1,10 @@
+id: C-12
+type: constraint
+category: scope
+status: active
+description: No mood analysis or visualization. The plugin captures and sonifies moods. It does not analyze trends, generate reports, or provide dashboards. That is a separate tool.
+cycle_created: 1
+cycle_modified: null
+content_hash: c0e2d4f27137c687db6a1f97c48ffd3148a01857de38512d3a5e3d5705af53b2
+token_count: 84
+file_path: .ideate/constraints/C-12.yaml

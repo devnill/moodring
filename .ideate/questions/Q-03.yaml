@@ -1,0 +1,14 @@
+id: Q-03
+type: domain_question
+domain: plugin-infrastructure
+status: open
+impact: Future contributors receive incorrect information about directory layout, output_dir, and missing-settings behavior.
+source: archive/cycles/001/spec-adherence.md (R1, R2, R3); archive/cycles/001/decision-log.md (OQ4)
+resolution: null
+resolved_in: null
+description: Should architecture.md, build.md, and playback.md be updated to match the implemented behavior?
+cycle_created: 1
+cycle_modified: null
+content_hash: "381b3e83c6ddc5939a97851aa60f9a404d13324bb281b4405d7e6923bd26b131"
+token_count: 137
+file_path: .ideate/questions/Q-03.yaml

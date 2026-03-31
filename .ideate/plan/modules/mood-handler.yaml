@@ -1,0 +1,26 @@
+id: module_spec-mood-handler
+type: module_spec
+name: Mood Handler
+scope: |
+  The central dispatch script (`scripts/mood-handler.sh`) that receives a mood label and triggers both sound playback and log writing. This is the command hook's entry point.
+  
+  NOT responsible for: mood detection (that is the prompt hook's job), sound playback mechanics (delegated to `playback`), log format details (delegated to `mood-log`), or settings management.
+provides:
+  - "`mood-handler.sh` — Shell script at `scripts/mood-handler.sh`"
+  - "- Invocation: `mood-handler.sh <EventName>`"
+  - "- Stdin: Hook context JSON (includes prompt hook response with mood label)"
+  - "- Behavior: Extracts mood label, calls play-sound.sh and write-log.sh"
+requires:
+  - "`play-sound.sh` (from: `playback`) — Called with mood label to play sound"
+  - "`write-log.sh` (from: `mood-log`) — Called with mood label and session ID to write log"
+  - "`settings.json` (from: `settings`) — Read to check `muted` state"
+boundary_rules:
+  - Must parse the mood label from stdin JSON reliably
+  - Must validate the mood label against the 16-label vocabulary
+  - Must exit cleanly (exit 0) on any error — hook scripts must never block Claude Code
+  - Must not perform any inference or model interaction
+  - Must handle missing or malformed input gracefully
+  - Sound playback runs in background (non-blocking)
+  - Log writing is synchronous (must complete before exit to avoid data loss)
+content_hash: b6c768732b57a2f96d99ed6a696e3264ddb069a820b1fe0b8af047530777659b
+token_count: 356

@@ -1,0 +1,22 @@
+id: module_spec-hook-config
+type: module_spec
+name: Hook Configuration
+scope: |
+  Defines the `hooks/hooks.json` file that maps Claude Code hook events to prompt-type and command-type hooks. Each hookable event gets a two-hook chain: a prompt hook to elicit the mood label, followed by a command hook to handle the response.
+  
+  NOT responsible for: the prompt text itself (that comes from `mood-prompt`), the handler logic (that comes from `mood-handler`), or settings.
+provides:
+  - "`hooks.json` — Hook configuration file at `hooks/hooks.json`"
+requires:
+  - "Mood prompt text (from: `mood-prompt`) — The exact prompt string to embed in each prompt hook"
+  - "`mood-handler.sh` path (from: `mood-handler`) — The script path for command hooks"
+boundary_rules:
+  - Every hookable Claude Code event gets a hook entry
+  - Each entry contains a prompt hook followed by a command hook, in a single hook group
+  - "Prompt hooks use `\"type\": \"prompt\"` with the mood capture prompt"
+  - "Command hooks use `\"type\": \"command\"` invoking `mood-handler.sh`"
+  - Timeout for prompt hooks should be generous (10-15s) to allow model inference
+  - Timeout for command hooks should be short (5s) — just playback and logging
+  - Uses `${CLAUDE_PLUGIN_ROOT}` for script paths (same as beepboop)
+content_hash: "5c8d86764c95cb624c7bd5af102e64c594a6d2903bd8a2d46d8f7cb980886a79"
+token_count: 318

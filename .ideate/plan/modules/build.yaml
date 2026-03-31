@@ -1,0 +1,24 @@
+id: module_spec-build
+type: module_spec
+name: Build
+scope: |
+  Build-time pipeline that generates WAV files from sound definitions. Includes `generate.sh` (build script) and `synth.toml` (synth configuration). Also manages the synth git submodule.
+  
+  NOT responsible for: sound design (that is `sound-definitions`), playback, or plugin runtime behavior.
+provides:
+  - "`generate.sh` — Build script at project root"
+  - "`synth.toml` — Synth configuration at project root"
+  - "`sounds/*.wav` — 16 generated WAV files (build output, committed to repo)"
+  - "`synth/` — Git submodule reference"
+requires:
+  - "`moods.py` (from: `sound-definitions`) — Python module with SOUNDS dict"
+  - "synth tool (from: git submodule at `~/code/synth`) — Sound generation engine"
+boundary_rules:
+  - "Build runs offline, not at plugin runtime (Principle #5, Constraint #11)"
+  - Generated WAV files are committed so the plugin works without running the build
+  - "synth is included as a git submodule (Constraint #10)"
+  - "Python 3.11+ required (Constraint #4)"
+  - "Output format: WAV at 44100 Hz"
+  - "Output directory: `plugin/sounds/`"
+content_hash: cdf02068aea73dc7d246cfd7b7a4037d201d7456e7e89165ac5baea1b0841ecd
+token_count: 274

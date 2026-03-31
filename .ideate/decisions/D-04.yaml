@@ -1,0 +1,13 @@
+id: D-04
+type: domain_decision
+domain: plugin-infrastructure
+status: settled — **not yet propagated to loop skill** (see Q-1)
+cycle: 1
+supersedes: null
+description: "The config skill includes an explicit fallback: if `CLAUDE_PLUGIN_ROOT` is unset, locate the plugin root via `find`."
+rationale: Skills may execute in contexts where the variable is not exported. Without the fallback, all path-dependent commands fail silently.
+cycle_created: 1
+cycle_modified: null
+content_hash: "0b88f2a3e61db07f689ec360d949063594eeb81d9f9c707e946736fbb78c981b"
+token_count: 132
+file_path: .ideate/decisions/D-04.yaml

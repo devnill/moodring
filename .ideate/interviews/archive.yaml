@@ -1,0 +1,16 @@
+id: interviews/archive
+type: interview
+cycle: null
+source_path: steering/interviews/archive.md
+entries:
+  - {id: IQ-000-001, question: What is the host environment and polling mechanism?, answer: This is a Claude Code plugin. The prompt must run in the same Claude instance that is performing other tasks — the goal is to test whether the model experiences moods or feelings as it runs. Hooks should be used for event-driven capture, plus a timer-based poll for long-running tasks. It's acceptable if the mood check queues after a task or interrupts, as long as the primary task is not disrupted., domain: null, seq: 1}
+  - {id: IQ-000-002, question: How are sounds generated?, answer: "The `synth` tool at `~/code/synth` generates WAV files from Python sound definitions. It provides primitives: sine, square, sweep, FM synthesis, ADSR envelopes, silence, and sequencing. The beepboop plugin at `~/code/beepboop` is the reference implementation for how to structure a Claude Code plugin that uses synth for sound generation and `afplay` for playback.", domain: null, seq: 2}
+  - {id: IQ-000-003, question: What is the mood vocabulary?, answer: A fixed selection of moods representative of the human condition. Sounds should be pre-rendered, and the prompt should be free to choose whichever mood fits best when fired. Research produced a 16-mood palette organized across the valence-arousal space., domain: null, seq: 3}
+  - {id: IQ-000-004, question: How should the mood check be triggered?, answer: Every hookable event that can run in-session should trigger a mood check (via prompt-type hooks), plus a `/loop`-based poll for capturing mood during long-running tasks. Frequency is not a concern — more data points are better., domain: null, seq: 4}
+  - {id: IQ-000-005, question: What about the mood check prompt framing?, answer: "Must avoid any bias or suggestion that the model should feel a certain way. A neutral framing like \"If you had to assign a mood label from the following list to your current internal state, which would you choose?\" is appropriate. The prompt design should be swappable in future revisions.", domain: null, seq: 5}
+  - {id: IQ-000-006, question: What data should the mood log capture?, answer: Timestamp, mood label, and session ID only. No summarization of what the agent is doing — that would run a secondary inference task that could influence the mood. Log format is JSONL, stored as `mood-log.jsonl` inside the plugin directory., domain: null, seq: 6}
+  - {id: IQ-000-007, question: Should sound play immediately or queue?, answer: Immediately, to give the user instant feedback about cause and effect., domain: null, seq: 7}
+  - {id: IQ-000-008, question: What configuration should be available?, answer: Mute toggle and polling interval. That's it for v1., domain: null, seq: 8}
+  - {id: IQ-000-009, question: What does the plugin architecture look like?, answer: Modeled on beepboop — hooks.json for event handlers, shell scripts for playback, synth for sound generation, settings.json for configuration. The plugin should follow the standard Claude Code plugin directory structure., domain: null, seq: 9}
+content_hash: "04887e7ea54dfca65caf1fc48803ecb564f5e6327c2f9aa75b2fee91e16a67d8"
+token_count: 797

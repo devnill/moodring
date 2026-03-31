@@ -1,0 +1,14 @@
+id: P-03
+type: domain_policy
+domain: plugin-infrastructure
+status: active
+derived_from:
+  - GP-6 (Follow Beepboop Pattern) — derived from execution-phase finding
+established: execution phase (DL21)
+amended: null
+description: Any shell script that references `${CLAUDE_PLUGIN_ROOT}` must include the find-based fallback path resolution pattern established in the config skill.
+cycle_created: 1
+cycle_modified: null
+content_hash: f6e54acfb64a700ab7d52526a4d7c7f3a381cf2887d5e2a5fde9d75141f6e3b3
+token_count: 119
+file_path: .ideate/policies/P-03.yaml

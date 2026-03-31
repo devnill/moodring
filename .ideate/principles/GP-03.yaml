@@ -1,0 +1,11 @@
+id: GP-03
+type: guiding_principle
+name: Maximum Data Capture
+status: active
+description: More mood data points are better. Every hookable event should trigger a mood check. A polling timer covers gaps during long-running tasks. The cost of over-sampling is negligible compared to the cost of missing state transitions.
+amendment_history: []
+cycle_created: 1
+cycle_modified: null
+content_hash: d57acc4edfdc3c790b50cf3644481dcafb107334d4792e0499d5bda95239a295
+token_count: 110
+file_path: .ideate/principles/GP-03.yaml

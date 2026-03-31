@@ -1,0 +1,21 @@
+id: module_spec-mood-prompt
+type: module_spec
+name: Mood Prompt
+scope: |
+  Defines the exact text of the mood capture prompt used by prompt-type hooks. This is the prompt that the model receives and must respond to with a single mood label in JSON format.
+  
+  NOT responsible for: hook configuration (where the prompt is used), response parsing, or any runtime behavior.
+provides:
+  - Mood prompt text — The canonical prompt string used in all prompt hooks and the loop skill
+requires:
+  - Nothing. This module has no dependencies on other modules.
+boundary_rules:
+  - "The prompt must be experimentally neutral (Guiding Principle #1)"
+  - No leading language, no suggestion that having emotions is expected or desirable
+  - Must present all 16 mood labels
+  - Must instruct the model to respond with JSON containing only the mood label
+  - "Must request a single-label response with no elaboration (Constraint #9)"
+  - "The prompt is hardcoded in v1 (Constraint #14)"
+  - The prompt text must be short to minimize context window impact
+content_hash: "579b516ebaa05ff1eed70f5c3e2eaddfc79db1c6d3b9aa990a06d8a61cecfc02"
+token_count: 257

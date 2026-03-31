@@ -1,0 +1,18 @@
+id: module_spec-settings
+type: module_spec
+name: Settings
+scope: |
+  Defines the `settings.json` file that controls runtime configuration. Contains mute toggle, polling interval, volume, and player path.
+  
+  NOT responsible for: reading or writing settings at runtime (consumers read it directly), or providing a UI for settings changes (that is `config-skill`).
+provides:
+  - "`settings.json` — Configuration file at plugin root with default values"
+requires:
+  - Nothing. This module has no dependencies on other modules.
+boundary_rules:
+  - "Only two user-facing settings in v1: `muted` and `poll_interval` (Principle #7)"
+  - "`volume` and `player` are internal/advanced settings (carried over from beepboop pattern)"
+  - File is JSON, human-readable and hand-editable
+  - Must ship with sensible defaults that work out of the box
+content_hash: "9a38c72f9236ff84d2ab1a14ba9059df63742ba4f8b6e155ecf159a8a8cda9ae"
+token_count: 208

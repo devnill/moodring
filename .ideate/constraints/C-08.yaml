@@ -1,0 +1,10 @@
+id: C-08
+type: constraint
+category: design
+status: active
+description: "JSONL log format. Mood log entries are JSON objects with exactly three fields: `timestamp` (ISO 8601), `mood` (string from the 16-mood vocabulary), `session_id` (string). One entry per line."
+cycle_created: 1
+cycle_modified: null
+content_hash: "822a0e120a66d88ca580cf27e1159ebcb137522fb36c64ad59a61a7c1581d2f8"
+token_count: 90
+file_path: .ideate/constraints/C-08.yaml

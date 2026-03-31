@@ -1,0 +1,20 @@
+id: module_spec-config-skill
+type: module_spec
+name: Config Skill
+scope: |
+  Defines the `/moodring:config` slash command for managing plugin settings. Allows users to toggle mute, set poll interval, and view current configuration.
+  
+  NOT responsible for: the settings schema (that is `settings`), or any runtime behavior beyond settings management.
+provides:
+  - "`config.md` — Skill definition at `commands/config.md`"
+  - "- Slash command: `/moodring:config`"
+  - "- Behavior: Read and modify settings.json"
+requires:
+  - "`settings.json` (from: `settings`) — The file to read and modify"
+boundary_rules:
+  - "Only exposes the two user-facing settings: `muted` and `poll_interval` (Principle #7)"
+  - Volume and player are available as advanced options but not prominently surfaced
+  - Must confirm changes after making them
+  - Must show current settings when invoked with no arguments
+content_hash: "3f676b9347bb2ce75e46a156b5175d93a3c984eb4d5ee2ef6059a7120b8fa300"
+token_count: 220

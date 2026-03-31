@@ -1,0 +1,11 @@
+id: GP-08
+type: guiding_principle
+name: Data Over Interpretation
+status: active
+description: The mood log captures raw data (timestamp, mood, session_id) without interpretation. Analysis happens outside the plugin. The plugin's job is to capture and sonify, not to analyze or visualize.
+amendment_history: []
+cycle_created: 1
+cycle_modified: null
+content_hash: d1fc56906d5e4019fa1ad404e670fcf4d1def5d0d1eb8bbf887aa9efa786e001
+token_count: 102
+file_path: .ideate/principles/GP-08.yaml

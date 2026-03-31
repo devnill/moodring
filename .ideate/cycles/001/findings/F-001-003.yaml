@@ -1,0 +1,15 @@
+id: F-001-003
+type: finding
+cycle: 1
+reviewer: code-reviewer
+severity: minor
+title: .gitkeep in sounds/ is redundant
+description: - 16 WAV files now exist. Placeholder serves no purpose.
+file_path: cycles/001/findings/F-001-003.yaml
+line: null
+suggestion: null
+addressed_by: null
+work_item: cycle-001
+verdict: Fail
+content_hash: ec200e5c265b7f7d6f17b18948bda86ccb64540b7d9fffeef685af3b52fe8744
+token_count: 86

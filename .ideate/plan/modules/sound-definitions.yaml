@@ -1,0 +1,22 @@
+id: module_spec-sound-definitions
+type: module_spec
+name: Sound Definitions
+scope: |
+  Python file (`moods.py`) containing 16 functions, each defining the synthesizer parameters for one mood. Each function returns a numpy array of audio samples. Uses the synth submodule's primitives.
+  
+  NOT responsible for: generating WAV files (that is `build`), playback, or mood selection.
+provides:
+  - "`moods.py` — Python module with 16 sound definition functions and a `SOUNDS` dict"
+  - "- Each function: `() -> np.ndarray` (audio samples at 44100 Hz)"
+  - "- `SOUNDS: dict[str, Callable[[], np.ndarray]]` mapping mood labels to functions"
+requires:
+  - "Synth primitives (from: synth submodule) — `sine`, `square`, `sweep`, `fm`, `adsr`, `seq`, `silence`, `SAMPLE_RATE`, and `_t` from `synth.primitives`"
+boundary_rules:
+  - Each function must be self-contained — no shared state between functions
+  - Function names use snake_case; SOUNDS dict keys use the exact mood label strings
+  - Each sound should be 0.2-1.5 seconds in duration (short enough for immediate feedback)
+  - Sounds must be perceptually distinct from each other
+  - Sound design must follow the parameters specified in the mood-sound mapping research
+  - No runtime dependencies beyond numpy (scipy used only if synth requires it)
+content_hash: "9069d50aa1c20ef96fe2a34d47d7e0e6d04cad5208a0ce38daeb8262697f2ee7"
+token_count: 321

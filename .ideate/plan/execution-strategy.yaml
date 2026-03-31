@@ -1,0 +1,60 @@
+id: execution-strategy
+type: execution_strategy
+title: Execution Strategy
+content: |
+  # Execution Strategy
+  
+  ## Mode
+  Batched parallel
+  
+  ## Parallelism
+  Max concurrent agents: 3
+  
+  ## Worktrees
+  Enabled: no
+  Reason: Small project with non-overlapping file scopes. All work items create new files — no merge conflicts possible.
+  
+  ## Review Cadence
+  After every batch (4 groups = 4 review points)
+  
+  ## Work Item Groups
+  
+  Group 1 (parallel): 001, 002, 005
+  - 001: Plugin scaffold (plugin.json, settings.json, directories)
+  - 002: Sound definitions (moods.py)
+  - 005: Log writer (write-log.sh)
+  - No dependencies. All create independent files.
+  
+  Group 2 (parallel, depends on Group 1): 003, 004, 009
+  - 003: Build pipeline (synth submodule, synth.toml, generate.sh, WAV generation) — depends on 002
+  - 004: Playback script (play-sound.sh) — depends on 001
+  - 009: Config skill (SKILL.md) — depends on 001
+  - No file scope overlaps within this group.
+  
+  Group 3 (sequential, depends on Group 2): 006
+  - 006: Mood handler (mood-handler.sh) — depends on 004, 005
+  - Single item, no parallelism needed.
+  
+  Group 4 (parallel, depends on Group 3): 007, 008
+  - 007: Hook configuration (hooks.json) — depends on 006
+  - 008: Loop skill (SKILL.md) — depends on 006
+  - No file scope overlaps.
+  
+  ## Dependency Graph
+  
+  ```
+  001 ──────┬──► 004 ──┐
+            │          │
+            └──► 009   ├──► 006 ──┬──► 007
+                       │          │
+  002 ──► 003 ─────────┘          └──► 008
+                       │
+  005 ─────────────────┘
+  ```
+  
+  ## Agent Configuration
+  Model for workers: sonnet
+  Model for reviewers: sonnet
+  Permission mode: acceptEdits
+content_hash: a548f8e23378eba346dee8314413cc5ac19fcdf623fab22accda3dbead49d615
+token_count: 414

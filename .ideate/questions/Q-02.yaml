@@ -1,0 +1,14 @@
+id: Q-02
+type: domain_question
+domain: plugin-infrastructure
+status: open
+impact: Plugin is not self-documenting. Users discovering it have no installation, configuration, or usage guidance.
+source: archive/cycles/001/gap-analysis.md (MI1); archive/cycles/001/summary.md
+resolution: null
+resolved_in: null
+description: Should a README.md be added? If so, what audience and scope?
+cycle_created: 1
+cycle_modified: null
+content_hash: eb795a6183afa3ed0af38e9a7a88c7af9bc29c4bdd89f6e59b4e68be8095fc46
+token_count: 121
+file_path: .ideate/questions/Q-02.yaml

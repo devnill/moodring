@@ -1,0 +1,19 @@
+id: F-001-001
+type: finding
+cycle: 1
+reviewer: code-reviewer
+severity: significant
+title: Loop skill has no CLAUDE_PLUGIN_ROOT fallback — config skill does
+description: |
+  - **Files**: `plugin/skills/loop/SKILL.md:10,30` vs `plugin/skills/config/SKILL.md:11-14`
+  - **Issue**: The loop skill uses `${CLAUDE_PLUGIN_ROOT}` in Bash commands without fallback. If unset, commands fail silently. The config skill has an explicit find-based fallback. Both run in the same environment — only the loop skill lacks the guard.
+  - **Impact**: Supplementary polling path is non-functional when CLAUDE_PLUGIN_ROOT is absent.
+  - **Suggested fix**: Add path-resolution step matching the config skill pattern.
+file_path: cycles/001/findings/F-001-001.yaml
+line: null
+suggestion: null
+addressed_by: null
+work_item: cycle-001
+verdict: Fail
+content_hash: d199bfcd67c389716ba35e196741419b6f1f169dcf924590a7c4341c8308211d
+token_count: 212

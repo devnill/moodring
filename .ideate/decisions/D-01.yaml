@@ -1,0 +1,13 @@
+id: D-01
+type: domain_decision
+domain: plugin-infrastructure
+status: settled
+cycle: 1
+supersedes: null
+description: Moodring's plugin structure, hook configuration, shell scripts, and synth integration follow beepboop's established patterns.
+rationale: Beepboop is a proven architecture for Claude Code audio plugins. Deviating without cause adds risk.
+cycle_created: 1
+cycle_modified: null
+content_hash: "033771042554a7bfeaa762e3fceb2c970bff1aa7340a48f2d8ea15e17327007e"
+token_count: 114
+file_path: .ideate/decisions/D-01.yaml

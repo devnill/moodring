@@ -1,0 +1,13 @@
+id: D-06
+type: domain_decision
+domain: mood-capture
+status: settled
+cycle: 1
+supersedes: null
+description: "The loop skill's mood prompt explicitly instructs the model to respond with JSON format `{\"mood\": \"<label>\"}`, matching the hook prompt format."
+rationale: Without the JSON instruction, the loop skill produced free-form responses that mood-handler.sh could not parse.
+cycle_created: 1
+cycle_modified: null
+content_hash: e3b6845354af74032663d8504adf3fdad5a80798894331c22b20a7c40ea79211
+token_count: 120
+file_path: .ideate/decisions/D-06.yaml

@@ -1,0 +1,13 @@
+id: D-03
+type: domain_decision
+domain: plugin-infrastructure
+status: settled
+cycle: 1
+supersedes: null
+description: mood-handler.sh validates the mood label using `grep -qwF` (fixed-string, whole-word, quiet match).
+rationale: Defense against regex injection on mood label input. A mood label containing regex metacharacters could otherwise escape validation.
+cycle_created: 1
+cycle_modified: null
+content_hash: "746f624ea60b37e7210e62d310dd5b9812ef3f0cdb7a17b0209fb0860bf8b9aa"
+token_count: 115
+file_path: .ideate/decisions/D-03.yaml

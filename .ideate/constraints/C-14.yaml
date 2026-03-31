@@ -1,0 +1,10 @@
+id: C-14
+type: constraint
+category: scope
+status: active
+description: No prompt customization in v1. The mood check prompt is hardcoded. Future revisions may make it configurable.
+cycle_created: 1
+cycle_modified: null
+content_hash: bd05c686b935c77566c902c2de4148af63c481ac1688976cc2c1e23c4da0d7c4
+token_count: 70
+file_path: .ideate/constraints/C-14.yaml

@@ -1,0 +1,15 @@
+id: F-001-004
+type: finding
+cycle: 1
+reviewer: code-reviewer
+severity: minor
+title: Architecture doc synth.toml schema contradicts implementation
+description: - Architecture shows output_dir = "plugin/sounds", implementation has "sounds". Implementation is correct.
+file_path: cycles/001/findings/F-001-004.yaml
+line: null
+suggestion: null
+addressed_by: null
+work_item: cycle-001
+verdict: Fail
+content_hash: aef498fa61a1fed9de51d5957862dcbad08ac4aed411a1d0ec3746cb204bfbae
+token_count: 107

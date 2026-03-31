@@ -1,0 +1,14 @@
+id: P-01
+type: domain_policy
+domain: plugin-infrastructure
+status: active
+derived_from:
+  - GP-6 (Follow Beepboop Pattern) + constraint C3
+established: planning phase
+amended: null
+description: Directory layout, hook configuration, shell scripts, and synth integration follow the established beepboop plugin patterns. Deviate only when Moodring's requirements demand it.
+cycle_created: 1
+cycle_modified: null
+content_hash: "6df57e431b066940af4672cd2e0654897ba106184224df81493970197a1c3038"
+token_count: 118
+file_path: .ideate/policies/P-01.yaml

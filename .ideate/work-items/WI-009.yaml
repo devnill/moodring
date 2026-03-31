@@ -1,0 +1,42 @@
+id: WI-009
+type: work_item
+title: Config Skill
+status: pending
+complexity: low
+scope:
+  - {path: skills/config/SKILL.md, op: create}
+depends:
+  - "001"
+blocks: []
+criteria:
+  - File `skills/config/SKILL.md` exists
+  - Skill has `description` and `allowed-tools` frontmatter fields
+  - "`allowed-tools` includes `Read`, `Edit`, `Bash`"
+  - Skill has `argument-hint` field showing available subcommands
+  - "With no args or \"show\": displays current muted state, poll interval, and volume"
+  - "With \"mute\": sets `muted` to `true` in settings.json"
+  - "With \"unmute\": sets `muted` to `false` in settings.json"
+  - "With \"interval <duration>\": sets `poll_interval` to the given value"
+  - "With \"volume <value>\": sets `volume` to the given float"
+  - After any change, confirms what was updated
+module: null
+domain: null
+notes: |
+  # Implementation Notes: 009
+  
+  ### SKILL.md Content
+  ```markdown
+  ---
+  description: Configure moodring plugin settings
+  argument-hint: "[show | mute | unmute | interval <duration> | volume <0.0-1.0>]"
+  allowed-tools: Read, Edit, Bash
+  ---
+  
+  Manage the moodring plugin configuration.
+  
+  Settings file location: `${CLAUDE_PLUGIN_ROOT}/settings.json`
+cycle_created: 1
+cycle_modified: null
+content_hash: "50dd1434974d91f680d2fb143f33aeab54fd31a890585b9608ae1a9d7d7337e4"
+token_count: 316
+file_path: .ideate/work-items/WI-009.yaml

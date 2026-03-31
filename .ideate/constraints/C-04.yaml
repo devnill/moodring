@@ -1,0 +1,10 @@
+id: C-04
+type: constraint
+category: technology
+status: active
+description: Python 3.11+ for sound definitions. The synth tool requires Python 3.11+ with numpy and scipy.
+cycle_created: 1
+cycle_modified: null
+content_hash: "7e0a91998d25da86dd2a7aeee7a988614925e560c1a06342f8bc906cd4d430b2"
+token_count: 67
+file_path: .ideate/constraints/C-04.yaml

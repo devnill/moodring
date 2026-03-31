@@ -1,0 +1,15 @@
+id: F-001-002
+type: finding
+cycle: 1
+reviewer: code-reviewer
+severity: minor
+title: __pycache__ present in plugin directory
+description: - Build artifact left after generate.sh. No .gitignore to exclude it.
+file_path: cycles/001/findings/F-001-002.yaml
+line: null
+suggestion: null
+addressed_by: null
+work_item: cycle-001
+verdict: Fail
+content_hash: f71773b7973ce6c4ecc96fd0dd73eba3127b8b63ac814ee3c79ea6f237d18f12
+token_count: 91

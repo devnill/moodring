@@ -1,0 +1,23 @@
+id: module_spec-playback
+type: module_spec
+name: Playback
+scope: |
+  Shell script (`scripts/play-sound.sh`) that plays a mood's WAV file using the system audio player. Adapted from beepboop's play-sound.sh but keyed on mood labels instead of hook event names.
+  
+  NOT responsible for: deciding which mood to play (that comes from `mood-handler`), generating sounds (that is `build`), or logging.
+provides:
+  - "`play-sound.sh` — Shell script at `scripts/play-sound.sh`"
+  - "- Invocation: `play-sound.sh <MoodLabel>`"
+  - "- Behavior: Plays `sounds/<MoodLabel>.wav` if not muted"
+requires:
+  - "`settings.json` (from: `settings`) — Read for `muted`, `volume`, and `player` fields"
+  - "WAV files (from: `build`) — Pre-rendered sound files at `sounds/<MoodLabel>.wav`"
+boundary_rules:
+  - Must exit 0 on any error (non-blocking)
+  - Must check `muted` setting before playback
+  - Must play sound in background (& suffix) so the script returns immediately
+  - "macOS only for v1 (afplay) per Constraint #1"
+  - Must handle missing WAV files gracefully (skip, exit 0)
+  - Must not produce any stdout/stderr that could pollute hook output
+content_hash: f79de966454b4ff40fd996ffc01aa38cbe44e3e235a82aab4540517b611fdab7
+token_count: 279
